@@ -17,8 +17,9 @@ export default function Home({blogs}) {
       {
         blogs.map(blog =>
           <div key={blog.subtitle} md="4">
-          <div md="4">
-            <h3>{blog.title}</h3>
+            <div md="4">
+              <h3>{blog.title}</h3>
+            </div>
           </div>
         )
       }
