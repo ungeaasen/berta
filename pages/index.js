@@ -16,7 +16,7 @@ export default function Home({blogs}) {
       <div className="mb-5">
       {
         blogs.map(blog =>
-          <div md="4">
+          <div key={blog.subtitle} md="4">
             <h3>{blog.title}</h3>
           </div>
         )
