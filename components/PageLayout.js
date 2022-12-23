@@ -1,11 +1,14 @@
 
+import { Container } from "react-bootstrap";
+import Row from 'react-bootstrap/Row';
 
-export default function PageLayout({children, className}) {
+
+export default function PageLayout({children}) {
   return (
-    <div>
-      <div className={`page-wrapper ${className}`}>
+    <Container>
+      <Row>
         {children}
-      </div>
+      </Row>
       <footer className="page-footer">
         <div>
           <a href="#">courses</a>{' | '}
@@ -13,6 +16,6 @@ export default function PageLayout({children, className}) {
           <a href="#">facebook</a>
         </div>
       </footer>
-    </div>
+    </Container>
   )
 }

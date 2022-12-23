@@ -4,26 +4,36 @@ import styles from '../styles/Home.module.css'
 import PageLayout from 'components/PageLayout';
 import AuthorIntro from 'components/AuthorIntro';
 import CardItem from 'components/CardItem';
+import Card from 'react-bootstrap/Card';
+import Navbar from 'react-bootstrap/Navbar';
 
 import { getAllBlogs } from 'lib/api';
 
 export default function Home({blogs}) {
   return (
     <PageLayout>
+      <Navbar bg="light" expand="lg">
+        <Navbar.Brand href="#home"><h2>Berta</h2></Navbar.Brand>
+      </Navbar>
       <AuthorIntro />
-      {JSON.stringify(blogs)}
       <hr/>
-      <div className="mb-5">
       {
         blogs.map(blog =>
-          <div key={blog.subtitle} md="4">
-            <div md="4">
-              <h3>{blog.title}</h3>
-            </div>
-          </div>
+          <Card className="mb-5" style={{ width: '18rem' }}>
+            <Card.Title key={blog.subtitle}>
+              <h4>{blog.title}</h4>
+            </Card.Title>
+            <Card.Text>
+              {blog.subtitle}
+            </Card.Text>
+              <Card.Body>      
+                <Card.Link href="#">Card Link</Card.Link>
+                <Card.Link href="#">Another Link</Card.Link>
+            </Card.Body>
+          </Card>
         )
       }
-      </div>
+      
     </PageLayout>
   )
 }

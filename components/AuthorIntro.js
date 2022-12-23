@@ -1,20 +1,20 @@
-
+import Col from 'react-bootstrap/Col';
 
 const AuthorIntro = () =>
-  <div>
-    <div md="8">
+  <Col >
+    <div >
       {/* AUTHOR INTRO STARTS */}
-      <div className="mb-4 admin-intro">
+      <div className="col">
 
         <div>
-          <h5 className="font-weight-bold mb-0">Berta</h5>
-          <p className="welcome-text">
-          Berta berta... 
-          </p>
+          <h1 className="font-weight-bold mb-0">Berta</h1>
+          <h3 className="welcome-text">
+            lorem ipsum bla hey g bla og hosen. 
+          </h3>
         </div>
       </div>
       {/* AUTHOR INTRO ENDS */}
     </div>
-  </div>
+  </Col>
 
 export default AuthorIntro;
