@@ -20,8 +20,23 @@ a {
   margin-bottom: 35px;
 }
 
+.tittel {
+  margin-bottom: 55px;
+}
+
 .ingress {
-  margin-bottom: 65px;
+  margin-bottom: 10vh;
+ 
+  .introTekst {
+    font-size: 22px;
+  }
+}
+
+.quote {
+  background-color: rgb(170, 170, 170);
+  margin-bottom: 20vh;
+  .quoteContainer {font-size: 55px;
+  }
 }
 /*
 @media (prefers-color-scheme: dark) {

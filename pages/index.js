@@ -9,6 +9,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Forms from '../components/Forms'
 import Container from 'react-bootstrap/Container'
 //import Footer from '../components/Footer.js'
+import Quote from '../components/Quote'
 
 import { getAllBlogs } from 'lib/api';
 
@@ -16,11 +17,12 @@ export default function Home({blogs}) {
   return (
     <PageLayout>
       <Navbar expand="lg">
-        <Container className="ingress">
+        <Container className="tittel">
           <Navbar.Brand href="#home"><h1>BERTA</h1></Navbar.Brand>
         </Container>
       </Navbar>
       <AuthorIntro />
+      <Quote />
       <Forms />
       {/*{
         blogs.map(blog =>

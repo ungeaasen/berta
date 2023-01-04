@@ -3,9 +3,9 @@
     text-align: center;
   }
   $primary-color: #111111;
-  $secondary-color: #f0eeee;
+  $secondary-color:white;
   $secondary-120:red;
-  $background-color: #f0eeee;
+  $background-color:rgb(131, 129, 129);
   
   .formWrapper {
    /* position: fixed;
@@ -40,7 +40,7 @@
         //border-radius: 12px;
         //margin: auto;
         background-color:  $secondary-color;
-        box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+        //box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
         width: 90%;
   
         // @include for-large {
