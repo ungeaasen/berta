@@ -4,7 +4,7 @@ const Quote = () => {
     return(
         <div className="quote">
             <div className="quoteContainer">
-                <p>`"You can quote me on that!"`</p>
+                <p>`&quot;`You can quote me on that!`&quot;`</p>
                 <p> -Jens Arildsen</p>
             </div>
         </div>
