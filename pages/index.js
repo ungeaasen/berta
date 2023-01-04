@@ -6,18 +6,23 @@ import AuthorIntro from 'components/AuthorIntro';
 import CardItem from 'components/CardItem';
 import Card from 'react-bootstrap/Card';
 import Navbar from 'react-bootstrap/Navbar';
+import Forms from '../components/Forms'
+import Container from 'react-bootstrap/Container'
+//import Footer from '../components/Footer.js'
 
 import { getAllBlogs } from 'lib/api';
 
 export default function Home({blogs}) {
   return (
     <PageLayout>
-      <Navbar bg="light" expand="lg">
-        <Navbar.Brand href="#home"><h2>Berta</h2></Navbar.Brand>
+      <Navbar expand="lg">
+        <Container className="ingress">
+          <Navbar.Brand href="#home"><h1>BERTA</h1></Navbar.Brand>
+        </Container>
       </Navbar>
       <AuthorIntro />
-      <hr/>
-      {
+      <Forms />
+      {/*{
         blogs.map(blog =>
           <Card key={blog.title}  className="mb-5" style={{ width: '18rem' }}>
             <Card.Title key={blog.subtitle}>
@@ -33,7 +38,7 @@ export default function Home({blogs}) {
           </Card>
         )
       }
-      
+    */}
     </PageLayout>
   )
 }
