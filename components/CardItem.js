@@ -1,3 +1,4 @@
+import Image from 'next/image'
 
 const CardItem = () => {
   return (
@@ -5,7 +6,7 @@ const CardItem = () => {
       <div className="card-body-wrapper">
         <div
           className="d-flex flex-row">
-          <img
+          <Image
             src={'https://via.placeholder.com/150'}
             className="rounded-circle mr-3"
             height="50px"

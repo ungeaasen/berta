@@ -19,7 +19,7 @@ export default function Home({blogs}) {
       <hr/>
       {
         blogs.map(blog =>
-          <Card className="mb-5" style={{ width: '18rem' }}>
+          <Card key={blog.title}  className="mb-5" style={{ width: '18rem' }}>
             <Card.Title key={blog.subtitle}>
               <h4>{blog.title}</h4>
             </Card.Title>
