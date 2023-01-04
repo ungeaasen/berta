@@ -1,10 +1,9 @@
-import Head from 'next/head'
-import Image from 'next/image'
+
 import styles from '../styles/Home.module.css'
 import PageLayout from 'components/PageLayout';
 import AuthorIntro from 'components/AuthorIntro';
 import CardItem from 'components/CardItem';
-import Card from 'react-bootstrap/Card';
+//import Card from 'react-bootstrap/Card';
 import Navbar from 'react-bootstrap/Navbar';
 import Forms from '../components/Forms'
 import Container from 'react-bootstrap/Container'

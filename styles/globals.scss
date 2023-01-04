@@ -33,9 +33,15 @@ a {
 }
 
 .quote {
-  background-color: rgb(170, 170, 170);
+  //background-color: rgb(170, 170, 170);
   margin-bottom: 20vh;
-  .quoteContainer {font-size: 55px;
+  .quoteContainer {
+    font-size: 34px;
+    color: rgb(115, 114, 114);
+  }
+  .quoter {
+    color: rgb(156, 156, 156);
+    font-size: 26px;
   }
 }
 /*

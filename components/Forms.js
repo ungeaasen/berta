@@ -42,8 +42,14 @@ const Form = () => {
                     <div className="afterForm">Takk for interessen!!</div>
                     ) : (
                     <form onSubmit={handleSubmit} target="_self">
+                        <div className="formText">
+                            <p>Vi har gjort en undersøkelse om internkommunikasjon i norske virksomheter, og lært en hel masse. 
+                                Skriv inn dine opplysninger for å få tilsendt rapporten helt gratis.
+                            </p>
+                        </div>
+                        <hr></hr>
                             <fieldset>
-                                <label htmlFor="entry.1772277633">Send tekst til Berta!</label>
+                                <label htmlFor="entry.1772277633">Skriv epost her:</label>
                                 <input
                                     required
                                     type="text"
@@ -53,73 +59,8 @@ const Form = () => {
                                     autoComplete={false}
                                 />
                             </fieldset>
-                        <h3>Spørsmål 1</h3>
-                        <div className="buttonsbox">
-                            <div className="container">
-                            <fieldset>
-                                <label htmlFor="entry.828730649">Enig</label>
-                                <input
-                                    required
-                                    type="radio"
-                                    name="entry.828730649"
-                                    onChange={handleInputData("entry.828730649")}
-                                    value="0"
-                                    autoComplete={false}
-                                />
-                                <label htmlFor="entry.828730649"></label>
-                                <input
-                                    type="radio"
-                                    name="entry.828730649"
-                                    onChange={handleInputData("entry.828730649")}
-                                    value="1"
-                                    autoComplete={false}
-                                />
-                                <label htmlFor="entry.828730649"></label>
-                                <input
-                                    type="radio"
-                                    name="entry.828730649"
-                                    onChange={handleInputData("entry.828730649")}
-                                    value="2"
-                                    autoComplete={false}
-                                />
-                                <label htmlFor="entry.828730649"></label>
-                                <input
-                                    type="radio"
-                                    name="entry.828730649"
-                                    onChange={handleInputData("entry.828730649")}
-                                    value="3"
-                                    autoComplete={false}
-                                />
-                                <label htmlFor="entry.828730649"></label>
-                                <input
-                                    type="radio"
-                                    name="entry.828730649"
-                                    onChange={handleInputData("entry.828730649")}
-                                    value="4"
-                                    autoComplete={false}
-                                />
-                                <label htmlFor="entry.828730649"></label>
-                                <input
-                                    type="radio"
-                                    name="entry.828730649"
-                                    onChange={handleInputData("entry.828730649")}
-                                    value="5"
-                                    autoComplete={false}
-                                />
-                                
-                                <input
-                                    type="radio"
-                                    name="entry.828730649"
-                                    onChange={handleInputData("entry.828730649")}
-                                    value="6"
-                                    autoComplete={false}
-                                />
-                                <label htmlFor="entry.828730649">Ikke enig</label>
-                        </fieldset>
-                            </div>
-                        </div>
                         
-                        <button type="submit">Send inn!</button>
+                        <button type="submit">Få gratis rapport!</button>
                     </form>
 
                     )}
