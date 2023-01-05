@@ -98,9 +98,10 @@
         }
   
         .formcontact {
-          //padding: 0rem 2rem;
+          padding: 0vh 10vw;
           .formText {
             font-size: 22px;
+           
           }
           
           .afterForm {
@@ -180,12 +181,12 @@
             }
   
             button {
-              background-color:  $primary-color;
+              background-color: $primary-color;
               border: none;
               color:  $secondary-color;
               font-weight: bolder;
               font-size: 1.8rem;
-              font-family: "Sirin Stencil";
+              //font-family: "Sirin Stencil";
               text-transform: uppercase;
               letter-spacing: 1.8px;
               width: 80%;

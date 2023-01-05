@@ -16,8 +16,8 @@ a {
   box-sizing: border-box;
 }
 
-.intro {
-  margin-bottom: 35px;
+h1 {
+  font-size: 30px !important;
 }
 
 .tittel {
@@ -25,23 +25,35 @@ a {
 }
 
 .ingress {
-  margin-bottom: 10vh;
+  margin-bottom: 35vh;
  
   .introTekst {
-    font-size: 22px;
+    font-size: 25px;
+  }
+
+  .intro {
+    margin-bottom: 85px;
+    h3 {
+      font-size: 75px !important;
+    }
+    
   }
 }
 
 .quote {
   //background-color: rgb(170, 170, 170);
-  margin-bottom: 20vh;
+  margin-bottom: 35vh;
+ 
   .quoteContainer {
-    font-size: 34px;
+    padding: 0vh 10vw;
+    font-style: italic;
+    font-size: 39px;
     color: rgb(115, 114, 114);
   }
   .quoter {
+    padding: 0vh 10vw;
     color: rgb(156, 156, 156);
-    font-size: 26px;
+    font-size: 24px;
   }
 }
 /*
