@@ -2,8 +2,13 @@
 
 html,
 body {
-  padding: 0;
-  font-family: 'Helvetica', 'Arial', sans-serif !important;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+    word-break: keep-all;
+    font-family: 'Helvetica', 'Arial', sans-serif !important;
 }
 
 a {
@@ -12,15 +17,18 @@ a {
 }
 
 h1 {
+  @media screen and (max-width: 600px) {
+    font-size: 26px;
+}
   font-size: 30px;
 }
 
 .container {
-  width: 100%;
+  margin: 20px;
   .wrapper {
+    
     display: grid;
     grid-template-columns: 1fr;
-   // margin: 40px 0px 40px 0px;
   }
 }
 
@@ -33,14 +41,21 @@ h1 {
       margin-bottom: 5vh;
   }
   margin-bottom: 35vh;
- 
   .introTekst {
     font-size: 25px;
   }
-
   .intro {
+    @media screen and (max-width: 600px) {
+      margin-bottom: 45px;
+      h3 {
+        font-size: 45px;
+      }
+    }
     margin-bottom: 85px;
     h3 {
+      @media screen and (max-width: 600px) {
+        font-size: 45px;
+      }
       font-size: 75px;
     }
   }
@@ -49,16 +64,24 @@ h1 {
 .quote {
   @media screen and (max-width: 600px) {
     margin-bottom: 5vh;
-}
+  }
   margin-bottom: 35vh;
  
   .quoteContainer {
+    @media screen and (max-width: 600px) {
+      font-size: 25px;
+      padding: 0vh 5vw;
+    }
     padding: 0vh 10vw;
     font-style: italic;
     font-size: 39px;
     color: rgb(115, 114, 114);
   }
   .quoter {
+    @media screen and (max-width: 600px) {
+      font-size: 21px;
+      padding: 0vh 5vw;
+    }
     padding: 0vh 10vw;
     color: rgb(156, 156, 156);
     font-size: 24px;
