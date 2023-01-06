@@ -2,9 +2,18 @@
 
 html,
 body {
+  width: 100%;
   padding: 0;
-  margin: 0;
+  margin: 0px 40px;
   font-family: 'Helvetica', 'Arial', sans-serif !important;
+}
+
+.container {
+  width: 100%;
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 }
 
 a {
@@ -12,12 +21,8 @@ a {
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
-}
-
 h1 {
-  font-size: 30px !important;
+  font-size: 30px;
 }
 
 .tittel {
@@ -34,14 +39,12 @@ h1 {
   .intro {
     margin-bottom: 85px;
     h3 {
-      font-size: 75px !important;
+      font-size: 75px;
     }
-    
   }
 }
 
 .quote {
-  //background-color: rgb(170, 170, 170);
   margin-bottom: 35vh;
  
   .quoteContainer {
@@ -56,16 +59,6 @@ h1 {
     font-size: 24px;
   }
 }
-/*
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
-}
-*/
+
 
 

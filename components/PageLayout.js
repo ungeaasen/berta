@@ -1,13 +1,13 @@
 
-import { Container } from "react-bootstrap";
-import Row from 'react-bootstrap/Row';
+//import { Container } from "react-bootstrap";
+//import Row from 'react-bootstrap/Row';
 
 export default function PageLayout({children}) {
   return (
-    <Container>
-      <Row>
+    <div className="container">
+      <div className="wrapper">
         {children}
-      </Row>
-    </Container>
+      </div>
+    </div>
   )
 }

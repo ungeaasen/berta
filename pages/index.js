@@ -1,12 +1,12 @@
 
-import styles from '../styles/Home.module.css'
+//import styles from '../styles/Home.module.css'
 import PageLayout from 'components/PageLayout';
 import AuthorIntro from 'components/AuthorIntro';
 import CardItem from 'components/CardItem';
 //import Card from 'react-bootstrap/Card';
 import Navbar from 'react-bootstrap/Navbar';
 import Forms from '../components/Forms'
-import Container from 'react-bootstrap/Container'
+//import Container from 'react-bootstrap/Container'
 //import Footer from '../components/Footer.js'
 import Quote from '../components/Quote'
 
@@ -16,9 +16,9 @@ export default function Home({blogs}) {
   return (
     <PageLayout>
       <Navbar expand="lg">
-        <Container className="tittel">
+        <div className="tittel">
           <Navbar.Brand href="#home"><h1>BERTA</h1></Navbar.Brand>
-        </Container>
+        </div>
       </Navbar>
       <AuthorIntro />
       <Quote />
