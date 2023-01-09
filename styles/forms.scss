@@ -8,7 +8,7 @@
   $background-color:rgb(131, 129, 129);
   
   .formWrapper {
-    margin-bottom: 20vh;
+    margin-bottom: 5vh;
     z-index: 2;
     display: flex;
     align-items: center;
@@ -28,7 +28,7 @@
       width: 100%;
       display: flex;
       align-items: center;
-     // justify-content: center;
+      justify-content: center;
       .contactFormWrapper {
         //border-radius: 12px;
         //margin: auto;
@@ -79,13 +79,19 @@
         }
   
         .formcontact {
-          //padding: 0vh 10vw;
           .formText {
             @media screen and (max-width: 600px) {
               font-size: 18px;
           }
             font-size: 22px;
-           
+          }
+
+          .boldText {
+            font-size: 29px;
+            @media screen and (max-width: 600px) {
+              font-size: 23px;
+          }
+            
           }
           
           .afterForm {
@@ -169,8 +175,8 @@
               background-color: $primary-color;
               border: none;
               color:  $secondary-color;
-              font-weight: bolder;
-              font-size: 1.8rem;
+              //font-weight: bolder;
+              font-size: 23px;
               text-transform: uppercase;
               letter-spacing: 1.8px;
               width: 80%;

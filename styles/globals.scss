@@ -55,9 +55,9 @@ h1 {
 
 .ingress {
   @media screen and (max-width: 600px) {
-      margin-bottom: 5vh;
+      margin-bottom: 10vh;
   }
-  margin-bottom: 35vh;
+  margin-bottom: 32vh;
   .introTekst {
       @media screen and (max-width: 600px) {
         font-size: 22px;
@@ -66,7 +66,8 @@ h1 {
   }
   .intro {
     @media screen and (max-width: 600px) {
-      margin-bottom: 45px;
+      //margin-bottom: 45px;
+      margin-bottom: 4vh;
     }
     margin-bottom: 85px;
   }
@@ -74,9 +75,9 @@ h1 {
 
 .quote {
   @media screen and (max-width: 600px) {
-    margin-bottom: 5vh;
+    margin-bottom: 10vh;
   }
-  margin-bottom: 35vh;
+  margin-bottom: 32vh;
  
   .quoteContainer {
     @media screen and (max-width: 600px) {

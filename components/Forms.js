@@ -36,15 +36,14 @@ const Form = () => {
     <div className="formWrapper">
         <div className="contactForm">
             <div className="contactFormWrapper">
-                <div className="formheader"></div>
                 <div className="formcontact">
                     {submit ? (
                     <div className="afterForm">Takk for interessen!!</div>
                     ) : (
                     <form onSubmit={handleSubmit} target="_self">
                         <div className="formText">
-                            <p>Vi har gjort en undersøkelse om internkommunikasjon i norske virksomheter, og lært en hel masse.</p> 
-                           
+                            <p className="boldText"><strong>Vi har gjort en undersøkelse om internkommunikasjon i norske virksomheter, og lært en hel masse.</strong></p> 
+
                             <p>Skriv inn dine opplysninger for å få tilsendt rapporten helt gratis.
                             </p>
                         </div>
@@ -53,7 +52,6 @@ const Form = () => {
                               <div>
                                 <p>Epost</p>
                                 </div>
-                                <br></br>
                                 <input
                                     required
                                     type="text"
