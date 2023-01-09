@@ -30,13 +30,16 @@ h1 {
 }
 
 .container {
-  margin: 0px 300px;
+  margin: 0px 450px;
+  @media only screen and (max-width: 1600px) {
+    margin: 0px 250px;
+  }
   @media only screen and (max-width: 1200px) {
-    margin: 0px 50px;
-}
-@media only screen and (max-width: 600px) {
-  margin: 0px 15px;
-}
+    margin: 0px 120px;
+  }
+  @media only screen and (max-width: 600px) {
+    margin: 0px 15px;
+  }
   .wrapper {
     width: 100%;
     height: 100%;
@@ -66,7 +69,6 @@ h1 {
       margin-bottom: 45px;
     }
     margin-bottom: 85px;
-
   }
 }
 
@@ -79,9 +81,13 @@ h1 {
   .quoteContainer {
     @media screen and (max-width: 600px) {
       font-size: 25px;
+      padding: 0vh 4vw;
+    }
+    @media screen and (max-width: 1200px) {
+      font-size: 25px;
       padding: 0vh 5vw;
     }
-    padding: 0vh 10vw;
+    padding: 0vh 5vw;
     font-style: italic;
     font-size: 39px;
     color: rgb(115, 114, 114);
