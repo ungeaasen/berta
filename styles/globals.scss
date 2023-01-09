@@ -1,14 +1,20 @@
 
 
 html,
-body {
+body, {
     width: 100%;
     height: 100%;
     margin: 0px;
     padding: 0px;
     overflow-x: hidden;
-    word-break: keep-all;
+    word-break: normal;
     font-family: 'Helvetica', 'Arial', sans-serif !important;
+}
+
+#__next {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 a {
@@ -18,17 +24,25 @@ a {
 
 h1 {
   @media screen and (max-width: 600px) {
-    font-size: 26px;
+    font-size: 40px;
 }
-  font-size: 30px;
+  font-size: 80px;
 }
 
 .container {
-  margin: 20px;
+  margin: 0px 300px;
+  @media only screen and (max-width: 1200px) {
+    margin: 0px 50px;
+}
+@media only screen and (max-width: 600px) {
+  margin: 0px 15px;
+}
   .wrapper {
-    
-    display: grid;
-    grid-template-columns: 1fr;
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    overflow-x: hidden;
+    word-break: normal;
   }
 }
 
@@ -42,22 +56,17 @@ h1 {
   }
   margin-bottom: 35vh;
   .introTekst {
+      @media screen and (max-width: 600px) {
+        font-size: 22px;
+    }
     font-size: 25px;
   }
   .intro {
     @media screen and (max-width: 600px) {
       margin-bottom: 45px;
-      h3 {
-        font-size: 45px;
-      }
     }
     margin-bottom: 85px;
-    h3 {
-      @media screen and (max-width: 600px) {
-        font-size: 45px;
-      }
-      font-size: 75px;
-    }
+
   }
 }
 
@@ -78,8 +87,9 @@ h1 {
     color: rgb(115, 114, 114);
   }
   .quoter {
+    text-align: center;
     @media screen and (max-width: 600px) {
-      font-size: 21px;
+      font-size: 19px;
       padding: 0vh 5vw;
     }
     padding: 0vh 10vw;

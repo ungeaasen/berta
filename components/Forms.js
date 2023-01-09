@@ -5,7 +5,7 @@ const Form = () => {
   const [submit, setSubmit] = useState(false);
   const [formData, setFormData] = useState({
     "entry.1772277633": "",
-	"entry.828730649":  ""
+	  "entry.828730649":  ""
   });
 
   const handleInputData = (input) => (e) => {
@@ -43,13 +43,17 @@ const Form = () => {
                     ) : (
                     <form onSubmit={handleSubmit} target="_self">
                         <div className="formText">
-                            <p>Vi har gjort en undersøkelse om internkommunikasjon i norske virksomheter, og lært en hel masse. 
-                                Skriv inn dine opplysninger for å få tilsendt rapporten helt gratis.
+                            <p>Vi har gjort en undersøkelse om internkommunikasjon i norske virksomheter, og lært en hel masse.</p> 
+                           
+                            <p>Skriv inn dine opplysninger for å få tilsendt rapporten helt gratis.
                             </p>
                         </div>
                         <hr></hr>
                             <fieldset>
-                                <label htmlFor="entry.1772277633">Skriv epost her:</label>
+                              <div>
+                                <p>Epost</p>
+                                </div>
+                                <br></br>
                                 <input
                                     required
                                     type="text"
@@ -60,7 +64,7 @@ const Form = () => {
                                 />
                             </fieldset>
                         
-                        <button type="submit">Få gratis rapport!</button>
+                        <button type="submit">Send meg gratis rapport!</button>
                     </form>
 
                     )}

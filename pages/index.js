@@ -17,7 +17,7 @@ export default function Home({blogs}) {
     <PageLayout>
       <Navbar expand="lg">
         <div className="tittel">
-          <Navbar.Brand href="#home"><h1>BERTA</h1></Navbar.Brand>
+          <Navbar.Brand href="#home"><p>BERTA</p></Navbar.Brand>
         </div>
       </Navbar>
       <AuthorIntro />
