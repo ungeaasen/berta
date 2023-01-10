@@ -17,21 +17,18 @@ export default function Home({blogs}) {
         <meta property="og:title" content="Berta internkommunikasjon. Det er insiden som teller." key="title" />
       </Head>
       <Script
-          id={`${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`} 
-          strategy="lazyOnload"
-          src={`https://www.googletagmanager.com/gtag/js?id=G-SEPDQV6SSGid=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
-        />
-          
-        <Script  id="myscript2" strategy="lazyOnload">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag(‘js’, new Date());
-            gtag(‘config’, ‘${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}’, {
-            page_path: window.location.pathname,
-            });
-          `}
-        </Script>
+        strategy="afterInteractive"
+        src={`https://www.googletagmanager.com/gtag/js?id=G-SEPDQV6SSGid=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+      />
+      
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS});
+        `}
+      </Script>
       <Navbar expand="lg">
         <div className="tittel">
           <Navbar.Brand href="#home"><p>BERTA</p></Navbar.Brand>
