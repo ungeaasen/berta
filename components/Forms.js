@@ -49,9 +49,6 @@ const Form = () => {
                         </div>
                         <hr></hr>
                             <fieldset>
-                              <div>
-                                <p>Epost</p>
-                              </div>
                               <label htmlFor="entry.1772277633">Epost:</label>
                               <input
                                 required
