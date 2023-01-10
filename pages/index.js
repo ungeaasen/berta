@@ -6,7 +6,6 @@ import Navbar from 'react-bootstrap/Navbar';
 import Forms from '../components/Forms'
 import Quote from '../components/Quote'
 import Head from 'next/head';
-import Script from 'next/script';
 import { getAllBlogs } from 'lib/api';
 
 export default function Home({blogs}) {
@@ -16,19 +15,6 @@ export default function Home({blogs}) {
         <title>Berta internkommunikasjon</title>
         <meta property="og:title" content="Berta internkommunikasjon. Det er insiden som teller." key="title" />
       </Head>
-      <Script
-        strategy="afterInteractive"
-        src={`https://www.googletagmanager.com/gtag/js?id=G-SEPDQV6SSGid=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
-      />
-      
-      <Script id="google-analytics" strategy="afterInteractive">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){window.dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', ${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS});
-        `}
-      </Script>
       <Navbar expand="lg">
         <div className="tittel">
           <Navbar.Brand href="#home"><p>BERTA</p></Navbar.Brand>
