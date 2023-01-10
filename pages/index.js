@@ -16,12 +16,13 @@ export default function Home({blogs}) {
         <title>Berta internkommunikasjon</title>
         <meta property="og:title" content="Berta internkommunikasjon. Det er insiden som teller." key="title" />
       </Head>
-      <Script 
+      <Script
+          id="myscript1" 
           strategy="lazyOnload"
           src={`https://www.googletagmanager.com/gtag/js?id=G-SEPDQV6SSGid=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
         />
           
-        <Script strategy="lazyOnload">
+        <Script  id="myscript2" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
