@@ -1,5 +1,3 @@
-
-
 const Quote = () => {
     return(
         <div className="quote">

@@ -1,20 +1,36 @@
 
-//import styles from '../styles/Home.module.css'
 import PageLayout from 'components/PageLayout';
 import AuthorIntro from 'components/AuthorIntro';
-import CardItem from 'components/CardItem';
-//import Card from 'react-bootstrap/Card';
+//import CardItem from 'components/CardItem';
 import Navbar from 'react-bootstrap/Navbar';
 import Forms from '../components/Forms'
-//import Container from 'react-bootstrap/Container'
-//import Footer from '../components/Footer.js'
 import Quote from '../components/Quote'
-
+import Head from 'next/head';
+import Script from 'next/script';
 import { getAllBlogs } from 'lib/api';
 
 export default function Home({blogs}) {
   return (
     <PageLayout>
+      <Head>
+        <title>Berta internkommunikasjon</title>
+        <Script 
+          strategy="lazyOnload"
+          src={`https://www.googletagmanager.com/gtag/js?id=G-SEPDQV6SSGid=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+        />
+          
+        <Script strategy="lazyOnload">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag(‘js’, new Date());
+          gtag(‘config’, ‘${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}’, {
+          page_path: window.location.pathname,
+          });
+        `}
+        </Script>
+        <meta property="og:title" content="Berta internkommunikasjon. Det er insiden som teller." key="title" />
+      </Head>
       <Navbar expand="lg">
         <div className="tittel">
           <Navbar.Brand href="#home"><p>BERTA</p></Navbar.Brand>
