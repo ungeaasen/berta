@@ -17,7 +17,7 @@ export default function Home({blogs}) {
         <meta property="og:title" content="Berta internkommunikasjon. Det er insiden som teller." key="title" />
       </Head>
       <Script
-          id="myscript1" 
+          id={`${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`} 
           strategy="lazyOnload"
           src={`https://www.googletagmanager.com/gtag/js?id=G-SEPDQV6SSGid=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
         />
