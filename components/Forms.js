@@ -51,15 +51,16 @@ const Form = () => {
                             <fieldset>
                               <div>
                                 <p>Epost</p>
-                                </div>
-                                <input
-                                    required
-                                    type="text"
-                                    name="entry.1772277633"
-                                    onChange={handleInputData("entry.1772277633")}
-                                    value={formData["entry.1772277633"]}
-                                    autoComplete={false}
-                                />
+                              </div>
+                              <label htmlFor="entry.1772277633">Epost:</label>
+                              <input
+                                required
+                                type="text"
+                                name="entry.1772277633"
+                                onChange={handleInputData("entry.1772277633")}
+                                value={formData["entry.1772277633"]}
+                                
+                              />
                             </fieldset>
                         
                         <button type="submit">Send meg gratis rapport!</button>
