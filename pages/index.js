@@ -13,7 +13,10 @@ export default function Home({blogs}) {
     <PageLayout>
       <Head>
         <title>Berta internkommunikasjon</title>
-        <meta property="og:title" content="Berta internkommunikasjon. Det er insiden som teller." key="title" />
+        <meta property="og:title" content="Det er insiden som teller." key="title" />
+        <meta name="description" content="Eksperter på internkommunikasjon" />
+        <meta name="keywords" content="Internkommunikasjon, Bedriftskommunikasjon" />
+        <meta name="author" content="Berta" />
       </Head>
       <Navbar expand="lg">
         <div className="tittel">

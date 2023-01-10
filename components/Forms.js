@@ -42,21 +42,19 @@ const Form = () => {
                     ) : (
                     <form onSubmit={handleSubmit} target="_self">
                         <div className="formText">
-                            <p className="boldText"><strong>Vi har gjort en undersøkelse om internkommunikasjon i norske virksomheter, og lært en hel masse.</strong></p> 
-
-                            <p>Skriv inn dine opplysninger for å få tilsendt rapporten helt gratis.
-                            </p>
+                            <p className="boldText"><strong>Vi har gjort en undersøkelse om internkommunikasjon i norske virksomheter, og lært en hel masse.</strong></p>
+                            <p>Skriv inn dine opplysninger for å få tilsendt rapporten helt gratis.</p>
                         </div>
                         <hr></hr>
                             <fieldset>
                               <label htmlFor="entry.1772277633">Epost:</label>
                               <input
                                 required
+                                id="entry.1772277633"
                                 type="text"
                                 name="entry.1772277633"
                                 onChange={handleInputData("entry.1772277633")}
                                 value={formData["entry.1772277633"]}
-                                
                               />
                             </fieldset>
                         
