@@ -6,9 +6,11 @@ import Navbar from 'react-bootstrap/Navbar';
 import Forms from '../components/Forms'
 import Quote from '../components/Quote'
 import Head from 'next/head';
-import { getAllBlogs } from 'lib/api';
+import { getAllBlogs, getFrontpage } from 'lib/api';
 
-export default function Home({blogs}) {
+
+export default function Home({blogs, frontpage}) {
+  console.log(frontpage[0].title)
   return (
     <PageLayout>
       <Head>
@@ -23,7 +25,7 @@ export default function Home({blogs}) {
           <Navbar.Brand href="#home"><p>BERTA</p></Navbar.Brand>
         </div>
       </Navbar>
-      <AuthorIntro />
+      <AuthorIntro title={frontpage[0].title} ingress={frontpage[0].ingress}/>
       <Quote />
       <Forms />
       {/*{
@@ -52,9 +54,10 @@ export default function Home({blogs}) {
 //called on server
 export async function getStaticProps() {
   const blogs = await getAllBlogs();
+  const frontpage = await getFrontpage();
   return {
     props: {
-      blogs
+      blogs, frontpage
     }
   }
 }
