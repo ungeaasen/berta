@@ -43,7 +43,7 @@ const Form = () => {
                     <form onSubmit={handleSubmit} target="_self">
                         <div className="formText">
                             <p className="boldText"><strong>Vi har gjort en undersøkelse om internkommunikasjon i norske virksomheter, og lært en hel masse.</strong></p>
-                            <p>Skriv inn dine opplysninger for å få tilsendt rapporten helt gratis.</p>
+                            <p>Skriv inn dine opplysninger for å få tilsendt rapporten helt gratis så snart den er ferdig!</p>
                         </div>
                         <hr></hr>
                             <fieldset>
