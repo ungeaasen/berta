@@ -30,7 +30,7 @@ h1 {
 }
 
 .container {
-  margin: 0px 500px;
+  margin: 0px 550px;
   @media only screen and (max-width: 1600px) {
     margin: 0px 250px;
   }
@@ -57,7 +57,7 @@ h1 {
   @media screen and (max-width: 600px) {
       margin-bottom: 10vh;
   }
-  margin-bottom: 32vh;
+  margin-bottom: 25vh;
   .introTekst {
       @media screen and (max-width: 600px) {
         font-size: 22px;
@@ -69,7 +69,7 @@ h1 {
       //margin-bottom: 45px;
       margin-bottom: 4vh;
     }
-    margin-bottom: 85px;
+    //margin-bottom: 85px;
   }
 }
 
@@ -77,7 +77,7 @@ h1 {
   @media screen and (max-width: 600px) {
     margin-bottom: 10vh;
   }
-  margin-bottom: 32vh;
+  margin-bottom: 25vh;
  
   .quoteContainer {
     @media screen and (max-width: 600px) {
