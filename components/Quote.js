@@ -2,10 +2,12 @@ const Quote = () => {
     return(
         <div className="quote">
             <div className="quoteContainer">
-                <p>&quot;Det er innsiden som teller!  &quot;</p>
+                <p>&quot;Internkommunikasjon er noe mange virksomheter undervurderer. 
+                    Det å kommunisere like godt internt som eksternt, er et viktig virkemiddel for å lykkes.&quot;
+                </p>
             </div>
             <div className="quoter">
-                <p>– Bjørn Glestad</p>
+                <p>– Line Kristine Moen Larsen, Leveranseleder kultur og struktur NAF</p>
             </div>
         </div>
     )
