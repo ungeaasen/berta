@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-//import Buttons from "./Buttons";
+import React, { useState, useCallback, useEffect } from "react";
+import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
 
 const Form = () => {
   const [submit, setSubmit] = useState(false);
@@ -7,6 +7,22 @@ const Form = () => {
     "entry.1772277633": "",
 	  "entry.828730649":  ""
   });
+
+  const { executeRecaptcha } = useGoogleReCaptcha();
+
+  const handleReCaptchaVerify = useCallback(async () => {
+    if (!executeRecaptcha) {
+      console.log('Execute recaptcha not yet available');
+      return;
+    }
+      const token = await executeRecaptcha('yourAction');
+      console.log("token " + token)
+    }, [executeRecaptcha]);
+
+    // You can use useEffect to trigger the verification as soon as the component being loaded
+    useEffect(() => {
+      handleReCaptchaVerify();
+    }, [handleReCaptchaVerify]);
 
   const handleInputData = (input) => (e) => {
     const { value } = e.target;
@@ -20,6 +36,7 @@ const Form = () => {
   async function handleSubmit(e) {
     e.preventDefault();
     setSubmit(true);
+    {handleReCaptchaVerify}
 
     let url = `https://docs.google.com/forms/d/1y7reHgxOP22lYBlZuvtleHsTyqYN8MB9aec4izyd8AA/formResponse?
 		entry.1772277633=${formData["entry.1772277633"]}
