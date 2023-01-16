@@ -1,7 +1,6 @@
 
 import PageLayout from 'components/PageLayout';
 import AuthorIntro from 'components/AuthorIntro';
-//import CardItem from 'components/CardItem';
 import Navbar from 'react-bootstrap/Navbar';
 import Forms from '../components/Forms'
 import Quote from '../components/Quote'
