@@ -1,7 +1,6 @@
 
 import PageLayout from 'components/PageLayout';
 import AuthorIntro from 'components/AuthorIntro';
-import Navbar from 'react-bootstrap/Navbar';
 import Forms from '../components/Forms'
 import Quote from '../components/Quote'
 import Head from 'next/head';
@@ -9,7 +8,6 @@ import { getAllBlogs, getFrontpage } from 'lib/api';
 
 
 export default function Home({blogs, frontpage}) {
-  console.log(frontpage[0].title)
   return (
     <PageLayout>
       <Head>
@@ -19,11 +17,13 @@ export default function Home({blogs, frontpage}) {
         <meta name="keywords" content="Internkommunikasjon, Bedriftskommunikasjon" />
         <meta name="author" content="Berta" />
       </Head>
-      <Navbar expand="lg">
+      <div>
         <div className="tittel">
-          <Navbar.Brand href="#home"><p>BERTA</p></Navbar.Brand>
+          <div href="#home">
+            <p>BERTA</p>
+          </div>
         </div>
-      </Navbar>
+      </div>
       <AuthorIntro title={frontpage[0].title} ingress={frontpage[0].ingress}/>
       <Quote />
       <Forms />

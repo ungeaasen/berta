@@ -1,8 +1,10 @@
 import React, { useState, useCallback, useEffect } from "react";
+import Modal from "./Modal";
 
 const _reCAPTCHA_site_key = "6Lec4fQjAAAAAF_uRfPBYrCOXa1advU_tL0ALjhu";
 
 const Form = () => {
+  const [show, setShow] = useState(false);
   const [submit, setSubmit] = useState(false);
   const [formData, setFormData] = useState({
     "entry.1772277633": "",
@@ -19,15 +21,17 @@ const Form = () => {
   function validateRecaptcha(e) {
     var response = grecaptcha.getResponse();
     if (response.length === 0) {
-        alert("not validated");
+        e.preventDefault();
+        setShow(true);
         return false;
     } else {
+        e.preventDefault();
         alert("validated");
         handleSubmit(e);
         return true;
-        
     }
   }
+
   const handleInputData = (input) => (e) => {
     const { value } = e.target;
 
@@ -51,9 +55,10 @@ const Form = () => {
       }
     });
   }
-  
+
   return (
     <div className="formWrapper">
+      <Modal onClose={() => {setShow(false)}} show={show}/>
         <div className="contactForm">
             <div className="contactFormWrapper">
                 <div className="formcontact" >
@@ -86,7 +91,6 @@ const Form = () => {
                         ></div>
                         <button type="submit">Send meg gratis rapport!</button>
                     </form>
-
                     )}
                 </div>
             </div>
