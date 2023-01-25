@@ -1,16 +1,16 @@
-import React, { useState, useCallback, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Modal from "./Modal";
 
 const _reCAPTCHA_site_key = "6Lec4fQjAAAAAF_uRfPBYrCOXa1advU_tL0ALjhu";
 
-const Form = () => {
+function Form(props) {
   const [show, setShow] = useState(false);
   const [submit, setSubmit] = useState(false);
   const [formData, setFormData] = useState({
     "entry.1772277633": "",
 	  "entry.828730649":  ""
   });
-  
+  /*
   useEffect(() => {
     const script = document.createElement("script")
     script.src = "https://www.google.com/recaptcha/api.js"
@@ -26,15 +26,13 @@ const Form = () => {
         return false;
     } else {
         e.preventDefault();
-        alert("validated");
         handleSubmit(e);
         return true;
     }
   }
-
+*/
   const handleInputData = (input) => (e) => {
     const { value } = e.target;
-
     setFormData((prevState) => ({
       ...prevState,
       [input]: value
@@ -58,42 +56,47 @@ const Form = () => {
 
   return (
     <div className="formWrapper">
-      <Modal onClose={() => {setShow(false)}} show={show}/>
-        <div className="contactForm">
+      <div className="contactForm">
             <div className="contactFormWrapper">
                 <div className="formcontact" >
                     {submit ? (
-                    <div className="afterForm">Takk for interessen!!</div>
+                    <div className="afterForm">Vi sender deg rapporten så snart den ferdig!</div>
                     ) : (
                     <form 
                       onSubmit={validateRecaptcha} 
                       target="_self"
                     >
-                        <div className="formText">
-                            <p className="boldText"><strong>Vi har gjort en undersøkelse om internkommunikasjon i norske virksomheter og lært en hel masse.</strong></p>
-                            <p>Skriv inn dine opplysninger for å få tilsendt rapporten helt gratis så snart den er ferdig!</p>
-                        </div>
-                        <hr></hr>
-                        <fieldset >
-                          <label htmlFor="entry.1772277633">Epost:</label>
-                          <input
-                            required
-                            id="entry.1772277633"
-                            type="email"
-                            name="entry.1772277633"
-                            onChange={handleInputData("entry.1772277633")}
-                            value={formData["entry.1772277633"]}
-                          />
-                        </fieldset>
-                        <div 
-                          className="g-recaptcha"
-                          data-sitekey="6Lec4fQjAAAAAF_uRfPBYrCOXa1advU_tL0ALjhu"
-                        ></div>
-                        <button type="submit">Send meg gratis rapport!</button>
+                      <div className="formText">
+                          <p className="boldText">
+                              Vi har gjort en undersøkelse om internkommunikasjon
+                              i norske virksomheter og lært en hel masse.
+                          </p>
+                          <p>
+                            Gi oss din epost, så vi kan sende deg rapporten når den ferdig! 
+                          </p>
+                      </div>
+                      <hr></hr>
+                      <fieldset >
+                        <label htmlFor="entry.1772277633">Epost:</label>
+                        <input
+                          required
+                          id="entry.1772277633"
+                          type="email"
+                          name="entry.1772277633"
+                          onChange={handleInputData("entry.1772277633")}
+                          value={formData["entry.1772277633"]}
+                        />
+                      </fieldset>
+                      <div 
+                        className="g-recaptcha"
+                        data-sitekey="6Lec4fQjAAAAAF_uRfPBYrCOXa1advU_tL0ALjhu"
+                      ></div>
+                      <button type="submit">Send meg gratis rapport!</button>
                     </form>
-                    )}
+                  )}
                 </div>
-            </div>
+                <Modal show={show} notShowing={setShow} onClose={() => {setShow(false)}} />
+              </div>
         </div>
     </div>
   );

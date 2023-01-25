@@ -1,3 +1,10 @@
+
+
+
+
+
+
+/*
 .App {
     //font-family: sans-serif;
     text-align: center;
@@ -20,20 +27,19 @@
       left: 0;
       right: 0;
       height: 100vh;
-      //background-color: #fff9fb90;
     }
   
     .contactForm {
       z-index: 3;
       width: 100%;
-      display: flex;
-      align-items: center;
+      //display: flex;
+      //align-items: center;
       //justify-content: center;
       .contactFormWrapper {
         //border-radius: 12px;
         //margin: auto;
-        background-color:  $secondary-color;
-        width: 90%;
+        //background-color:  $secondary-color;
+        //width: 90%;
         .contactLabel {
           color:  $primary-color;
           font-size: 2rem;
@@ -79,6 +85,14 @@
         }
   
         .formcontact {
+          .buttonsbox {
+            background-color: grey;
+            display: flex;
+            justify-content: center;
+            .container {
+              justify-content: center;
+            } 
+          }
           .formText {
             @media screen and (max-width: 600px) {
               font-size: 18px;
@@ -198,3 +212,5 @@
       }
     }
   }
+
+  */

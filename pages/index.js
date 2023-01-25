@@ -1,10 +1,11 @@
 
 import PageLayout from 'components/PageLayout';
 import AuthorIntro from 'components/AuthorIntro';
-import Forms from '../components/Forms'
-import Quote from '../components/Quote'
+//import Forms from '../components/Forms';
+import Quote from '../components/Quote';
 import Head from 'next/head';
 import { getAllBlogs, getFrontpage } from 'lib/api';
+import FormMultiple from '../components/FormMultiple';
 
 
 export default function Home({blogs, frontpage}) {
@@ -26,7 +27,7 @@ export default function Home({blogs, frontpage}) {
       </div>
       <AuthorIntro title={frontpage[0].title} ingress={frontpage[0].ingress}/>
       <Quote />
-      <Forms />
+      <FormMultiple />
       {/*{
         blogs.map(blog =>
           <Card key={blog.title}  className="mb-5" style={{ width: '18rem' }}>

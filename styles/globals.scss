@@ -32,12 +32,21 @@ body, {
   margin: auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 80%;
-}
+  width: 50vw;
+  //display: grid;
+  //justify-content: center;
+  //text-align: center;
+    p {
+         @media screen and (max-width: 600px) {
+        font-size: 18px;
+      }
+    }
+  }
 
 /* The Close Button */
 .close {
   color: #aaaaaa;
+  //justify-self: flex-end;
   float: right;
   font-size: 28px;
   font-weight: bold;
@@ -50,6 +59,96 @@ body, {
   cursor: pointer;
 }
 /*------------------------------------------MODAL END------------------------------------------*/
+
+/*------------------------------------------FORM START------------------------------------------*/
+.radioForm {
+  .radioFormContainer {
+    width: 100%;
+    .buttonsboxContainer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      //max-width: 900px;
+      margin: 0 auto;
+      .buttons {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+}
+  input[type="radio"] {
+    @media screen and (max-width: 600px) {
+      width: 2.15em;
+      height: 2.15em;
+      margin: 5px;
+    }
+    appearance: none;
+    margin: 20px;
+    font: inherit;
+    color: currentColor;
+    width: 3.15em;
+    height: 3.15em;
+    border: 0.15em solid currentColor;
+    border-radius: 50%;
+    transform: translateY(-0.075em);
+    transition: border 0.4s linear;
+    transition: background-color 0.6s linear;
+    &:hover {
+      background-color: rgb(63, 109, 249);
+      border: 0.45em solid rgb(175, 193, 249)
+    }
+    &:focus {
+      background-color: rgb(63, 109, 249);
+    }
+    &:checked {
+      background-color: rgb(63, 109, 249);
+    }
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    margin-top: 1rem;
+    border: none;
+    outline: 0;
+    letter-spacing: 0.2rem;
+    font-size: 1.6rem;
+    background-color: transparent;
+
+    &:focus{
+      background-color: transparent;
+
+    }
+    &:active{
+      background-color: rgb(63, 109, 249);
+    }
+  }
+
+  button {
+    @media screen and (max-width: 600px) {
+      font-size: 18px;
+  }
+  background-color: lightgrey;
+  border: none;
+  font-size: 23px;
+  text-transform: uppercase;
+  letter-spacing: 1.8px;
+  width: 80%;
+  border-radius: 12px;
+  margin: auto;
+  padding: 0.6rem;
+  border: 2px solid transparent;
+  cursor: pointer;
+
+  &:hover {
+    background-color: transparent;
+  }
+}
+
+
+/*------------------------------------------FORM END------------------------------------------*/
 
 #__next {
   display: flex;
