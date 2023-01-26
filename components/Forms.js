@@ -10,7 +10,16 @@ function Form(props) {
     "entry.1772277633": "",
 	  "entry.828730649":  ""
   });
-  /*
+
+  const handleInputData = (input) => (e) => {
+    const { value } = e.target;
+    setFormData((prevState) => ({
+      ...prevState,
+      [input]: value
+    }));
+  };
+
+  
   useEffect(() => {
     const script = document.createElement("script")
     script.src = "https://www.google.com/recaptcha/api.js"
@@ -30,14 +39,7 @@ function Form(props) {
         return true;
     }
   }
-*/
-  const handleInputData = (input) => (e) => {
-    const { value } = e.target;
-    setFormData((prevState) => ({
-      ...prevState,
-      [input]: value
-    }));
-  };
+
 
   async function handleSubmit(e) {
     e.preventDefault();

@@ -1,12 +1,13 @@
 
 import PageLayout from 'components/PageLayout';
 import AuthorIntro from 'components/AuthorIntro';
-//import Forms from '../components/Forms';
+import FormsM from '../components/FormsM';
 import Quote from '../components/Quote';
 import Head from 'next/head';
 import { getAllBlogs, getFrontpage } from 'lib/api';
 import FormMultiple from '../components/FormMultiple';
 
+//import { getAllBlogs } from 'lib/api';
 
 export default function Home({blogs, frontpage}) {
   return (
@@ -15,7 +16,7 @@ export default function Home({blogs, frontpage}) {
         <title>Berta internkommunikasjon</title>
         <meta property="og:title" content="Det er insiden som teller." key="title" />
         <meta name="description" content="Eksperter på internkommunikasjon" />
-        <meta name="keywords" content="Internkommunikasjon, Bedriftskommunikasjon" />
+        <meta name="keywords" content="Internkommunikasjon, Bedriftskommunikasjon, trivsel på arbeidet, klar kommunikasjon" />
         <meta name="author" content="Berta" />
       </Head>
       <div>
@@ -27,7 +28,8 @@ export default function Home({blogs, frontpage}) {
       </div>
       <AuthorIntro title={frontpage[0].title} ingress={frontpage[0].ingress}/>
       <Quote />
-      <FormMultiple />
+      <FormsM />
+      
       {/*{
         blogs.map(blog =>
           <Card key={blog.title}  className="mb-5" style={{ width: '18rem' }}>
