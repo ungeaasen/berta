@@ -1,13 +1,10 @@
-import React, { useState, useEffect } from "react";
 
-const Buttons = ({entry}) => {
-    const [formData, setFormData] = useState({
-          "{entry}":  ""
-      });
+
+const Buttons = ({entry, formData, setFormData}) => {
 
     const handleInputData = (input) => (e) => {
         const { value } = e.target;
-        console.log("entry " + entry + "formData " + formData[1] )
+        console.log("entry " + entry + "formData " + formData )
         setFormData((prevState) => ({
           ...prevState,
           [input]: value

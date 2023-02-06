@@ -1,13 +1,9 @@
-
 import PageLayout from 'components/PageLayout';
 import AuthorIntro from 'components/AuthorIntro';
 import FormsM from '../components/FormsM';
 import Quote from '../components/Quote';
 import Head from 'next/head';
 import { getAllBlogs, getFrontpage } from 'lib/api';
-import FormMultiple from '../components/FormMultiple';
-
-//import { getAllBlogs } from 'lib/api';
 
 export default function Home({blogs, frontpage}) {
   return (
@@ -30,23 +26,22 @@ export default function Home({blogs, frontpage}) {
       <Quote />
       <FormsM />
       
-      {/*{
+      {
         blogs.map(blog =>
-          <Card key={blog.title}  className="mb-5" style={{ width: '18rem' }}>
-            <Card.Title key={blog.subtitle}>
+          <div key={blog.title}  className="mb-5" style={{ width: '18rem' }}>
+            <div key={blog.subtitle}>
               <h4>{blog.title}</h4>
-            </Card.Title>
-            <Card.Text>
+            </div>
+            <div>
               {blog.subtitle}
-            </Card.Text>
-              <Card.Body>      
-                <Card.Link href="#">Card Link</Card.Link>
-                <Card.Link href="#">Another Link</Card.Link>
-            </Card.Body>
-          </Card>
+            </div>
+              <div>      
+                <a href="#">Card Link</a>
+            </div>
+          </div>
         )
       }
-    */}
+    
     </PageLayout>
   )
 }

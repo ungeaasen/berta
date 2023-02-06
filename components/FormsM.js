@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Modal from "./Modal";
+import Buttons from "./RadioButtons";
+import TextField from "./TextField";
+import GCap from "./GCaptcha";
 
 const _reCAPTCHA_site_key = process.env.reCAPTCHA_site_key;
 
@@ -8,26 +11,16 @@ function FormsM(props) {
   const [submit, setSubmit] = useState(false);
   const [formData, setFormData] = useState({
     "{entryOne}": "",
-	  "{entryTwo}":  ""
+	  "{entryTwo}":  "",
+    "{entryThree}":  ""
   });
 
   const entryOne = "entry.1772277633";
   const entryTwo = "entry.828730649";
-
-  const handleInputData = (input) => (e) => {
-    const { value } = e.target;
-    setFormData((prevState) => ({
-      ...prevState,
-      [input]: value
-    }));
-  };
-
-  useEffect(() => {
-    const script = document.createElement("script")
-    script.src = "https://www.google.com/recaptcha/api.js"
-    window.onSubmit = () => alert("reCaptcha submit")
-    document.body.appendChild(script)
-  }, [])
+  const entryThree = "entry.1880127155";
+  const entryFour = "entry.333";
+  const entryFive = "entry.444";
+  const entrySix = "entry.555";
 
   function validateRecaptcha(e) {
     var response = grecaptcha.getResponse();
@@ -45,10 +38,7 @@ function FormsM(props) {
   async function handleSubmit(e) {
     e.preventDefault();
     setSubmit(true);
-    let url = `https://docs.google.com/forms/d/1y7reHgxOP22lYBlZuvtleHsTyqYN8MB9aec4izyd8AA/formResponse?
-		entry.1772277633=${formData["entry.1772277633"]}
-		&entry.828730649=${formData["entry.828730649"]}`;
-    console.log("URL" + url)
+    let url = `https://docs.google.com/forms/d/1y7reHgxOP22lYBlZuvtleHsTyqYN8MB9aec4izyd8AA/formResponse?${entryOne}=${formData[`${entryOne}`]}&${entryTwo}=${formData[`${entryTwo}`]}&${entryThree}=${formData[`${entryThree}`]}`;
     const res = await fetch(url, {
       method: "POST",
       headers: {
@@ -60,15 +50,15 @@ function FormsM(props) {
   return (
     <div className="formWrapper">
       <div className="contactForm">
-            <div className="contactFormWrapper">
-                <div className="formcontact" >
-                    {submit ? (
-                    <div className="afterForm">Vi sender deg rapporten så snart den ferdig!</div>
-                    ) : (
+          <div className="contactFormWrapper">
+              <div className="formcontact" >
+                  {submit ? (
+                  <div className="afterForm"><h3>Takk for din interesse! Vi sender deg rapporten så snart den er ferdig. Visste du at : 1fact 2 fact 3 fact</h3> </div>
+                  ) : (
                     <form 
-                      onSubmit={validateRecaptcha} 
-                      target="_self"
-                    >
+                        onSubmit={validateRecaptcha} 
+                        target="_self"
+                      >
                       <div className="formText">
                           <p className="boldText">
                               Vi har gjort en undersøkelse om internkommunikasjon
@@ -79,95 +69,34 @@ function FormsM(props) {
                           </p>
                       </div>
                       <hr></hr>
-                      <fieldset >
-                        <label htmlFor={entryOne}>Epost:</label>
-                        <input
-                          required
-                          id={entryOne}
-                          type="email"
-                          name={entryOne}
-                          onChange={handleInputData(`${entryOne}`)}
-                          value={formData[{entryOne}]}
-                        />
-                      </fieldset>
+                      <TextField entry={entryOne} formData={formData} setFormData={setFormData}/>
                       <h3>Spørsmål 1</h3>
                         <div className="buttonsbox">
-                          <div className="buttonsboxContainer">
-                                <fieldset className="buttons">
-                                    <div className="enig">Enig</div>
-                                    <input
-                                        required
-                                        type="radio"
-                                        id={entryTwo}
-                                        name={entryTwo}
-                                        onChange={handleInputData(`${entryTwo}`)}
-                                        value="0"
-                                        autoComplete="false"
-                                    />
-                                    <label htmlFor={entryTwo}></label>
-                                    <input
-                                        type="radio"
-                                        id={entryTwo}
-                                        name={entryTwo}
-                                        onChange={handleInputData(`${entryTwo}`)}
-                                        value="1"
-                                        autoComplete="false"
-                                    />
-                                    <label htmlFor={entryTwo}></label>
-                                    <input
-                                        type="radio"
-                                        name={entryTwo}
-                                        onChange={handleInputData(`${entryTwo}`)}
-                                        value="2"
-                                        autoComplete="false"
-                                    />
-                                    <label htmlFor={entryTwo}></label>
-                                    <input
-                                        type="radio"
-                                        name={entryTwo}
-                                        onChange={handleInputData(`${entryTwo}`)}
-                                        value="3"
-                                        autoComplete="false"
-                                    />
-                                    <label htmlFor={entryTwo}></label>
-                                    <input
-                                        type="radio"
-                                        name={entryTwo}
-                                        onChange={handleInputData(`${entryTwo}`)}
-                                        value="4"
-                                        autoComplete="false"
-                                    />
-                                    <label htmlFor={entryTwo}></label>
-                                    <input
-                                        type="radio"
-                                        name={entryTwo}
-                                        onChange={handleInputData(`${entryTwo}`)}
-                                        value="5"
-                                        autoComplete="false"
-                                    />
-                                    <label htmlFor={entryTwo}></label>
-                                    <input
-                                        type="radio"
-                                        name={entryTwo}
-                                        onChange={handleInputData(`${entryTwo}`)}
-                                        value="6"
-                                        autoComplete="false"
-                                    />
-                                    <label htmlFor={entryTwo}></label>
-                                    <div className="ikkeEnig">Ikke enig</div>
-                                </fieldset>
-                            </div>
+                          <Buttons entry={entryTwo} formData={formData} setFormData={setFormData} />
                         </div>
-                      <div 
-                        className="g-recaptcha"
-                        data-sitekey="6Lec4fQjAAAAAF_uRfPBYrCOXa1advU_tL0ALjhu"
-                      ></div>
+                        <h3>Spørsmål 2</h3>
+                        <div className="buttonsbox">
+                          <Buttons entry={entryThree} formData={formData} setFormData={setFormData} />
+                        </div>
+                        <h3>Spørsmål 3</h3>
+                        <div className="buttonsbox">
+                          <Buttons entry={entryFour} formData={formData} setFormData={setFormData} />
+                        </div>
+                        <h3>Spørsmål 4</h3>
+                        <div className="buttonsbox">
+                          <Buttons entry={entryFive} formData={formData} setFormData={setFormData} />
+                        </div>
+                        <h3>Spørsmål 5</h3>
+                        <div className="buttonsbox">
+                          <Buttons entry={entrySix} formData={formData} setFormData={setFormData} />
+                        </div>
+                      <GCap />
                       <button type="submit">Send meg gratis rapport!</button>
                     </form>
                   )}
-                </div>
-                <Modal show={show} notShowing={setShow} onClose={() => {setShow(false)}} />
               </div>
+              <Modal show={show} notShowing={setShow} onClose={() => {setShow(false)}} />
+          </div>
         </div>
     </div>
   );
