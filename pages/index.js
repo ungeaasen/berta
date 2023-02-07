@@ -25,7 +25,7 @@ export default function Home({blogs, frontpage}) {
       <AuthorIntro title={frontpage[0].title} ingress={frontpage[0].ingress}/>
       <Quote />
       <FormsM />
-      
+     { /*
       {
         blogs.map(blog =>
           <div key={blog.title}  className="mb-5" style={{ width: '18rem' }}>
@@ -41,7 +41,7 @@ export default function Home({blogs, frontpage}) {
           </div>
         )
       }
-    
+    */}
     </PageLayout>
   )
 }

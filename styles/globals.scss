@@ -61,43 +61,38 @@ body, {
 /*------------------------------------------MODAL END------------------------------------------*/
 
 /*------------------------------------------FORM START------------------------------------------*/
-.radioForm {
-  .radioFormContainer {
-    width: 100%;
-    .buttonsboxContainer {
+.form {
+  .formWrapper {
+    .buttons {
       display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      //max-width: 900px;
-      margin: 0 auto;
-      .buttons {
-        display: flex;
-        justify-content: space-between;
-      }
+      justify-content: space-around;
+      background-color: rgb(211, 211, 211);
+      border: 0;
     }
   }
+  .g-recaptcha {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+  }
 }
+
   input[type="radio"] {
-    @media screen and (max-width: 600px) {
-      width: 2.15em;
-      height: 2.15em;
-      margin: 5px;
-    }
     appearance: none;
-    margin: 20px;
-    font: inherit;
-    color: currentColor;
-    width: 3.15em;
-    height: 3.15em;
-    border: 0.15em solid currentColor;
+    @media screen and (max-width: 740px) {
+      width: 1.15em;
+      height: 1.15em;
+    }
+    width: 2.15em;
+    height: 2.15em;
+    border: 0.10em solid gray;
     border-radius: 50%;
     transform: translateY(-0.075em);
     transition: border 0.4s linear;
     transition: background-color 0.6s linear;
     &:hover {
       background-color: rgb(63, 109, 249);
-      border: 0.45em solid rgb(175, 193, 249)
+      border: 0.20em solid rgb(175, 193, 249)
     }
     &:focus {
       background-color: rgb(63, 109, 249);
@@ -115,10 +110,10 @@ body, {
     outline: 0;
     letter-spacing: 0.2rem;
     font-size: 1.6rem;
-    background-color: transparent;
+    background-color: rgb(113, 219, 255);
 
     &:focus{
-      background-color: transparent;
+      background-color: rgb(63, 109, 249);
 
     }
     &:active{
@@ -129,21 +124,23 @@ body, {
   button {
     @media screen and (max-width: 600px) {
       font-size: 18px;
-  }
-  background-color: lightgrey;
-  border: none;
-  font-size: 23px;
-  text-transform: uppercase;
-  letter-spacing: 1.8px;
-  width: 80%;
-  border-radius: 12px;
-  margin: auto;
-  padding: 0.6rem;
-  border: 2px solid transparent;
-  cursor: pointer;
+    }
+    background-color: rgb(113, 219, 255);
+    border: none;
+    font-size: 23px;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+    width: 80%;
+    border-radius: 12px;
+    margin: auto;
+    padding: 0.6rem;
+    border: 2px solid transparent;
+    cursor: pointer;
+    justify-content: center;
+    display: flex;
 
   &:hover {
-    background-color: transparent;
+    background-color: gray;
   }
 }
 

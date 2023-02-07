@@ -12,7 +12,6 @@ const Buttons = ({entry, formData, setFormData}) => {
       };
 
     return (
-        <div className="buttonsboxContainer">
         <fieldset className="buttons">
             <div className="enig">Enig</div>
             <input
@@ -76,7 +75,6 @@ const Buttons = ({entry, formData, setFormData}) => {
             <label htmlFor={entry}></label>
             <div className="ikkeEnig">Ikke enig</div>
         </fieldset>
-    </div>
     )
 
 }
