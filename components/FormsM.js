@@ -10,6 +10,7 @@ function FormsM(props) {
   const [show, setShow] = useState(false);
   const [submit, setSubmit] = useState(false);
   const [formData, setFormData] = useState({
+    "{entryMail}": "",
     "{entryOne}": "",
 	  "{entryTwo}":  "",
     "{entryThree}":  "",
@@ -41,7 +42,7 @@ function FormsM(props) {
   const entrySix = "entry.315794520";
   const entrySeven = "entry.1731836643";
 
-  let siteUrl = `${url}/formResponse?${entryOne}=${formData[`${entryOne}`]}&${entryTwo}=${formData[`${entryTwo}`]}&${entryThree}=${formData[`${entryThree}`]}&${entryFour}=${formData[`${entryFour}`]}&${entryFive}=${formData[`${entryFive}`]}&${entrySix}=${formData[`${entrySix}`]}&${entrySeven}=${formData[`${entrySeven}`]}`;
+  let siteUrl = `${url}/formResponse?${entryMail}=${formData[`${entryMail}`]}&${entryOne}=${formData[`${entryOne}`]}&${entryTwo}=${formData[`${entryTwo}`]}&${entryThree}=${formData[`${entryThree}`]}&${entryFour}=${formData[`${entryFour}`]}&${entryFive}=${formData[`${entryFive}`]}&${entrySix}=${formData[`${entrySix}`]}&${entrySeven}=${formData[`${entrySeven}`]}`;
 
   function validateRecaptcha(e) {
     var response = grecaptcha.getResponse();
@@ -88,18 +89,20 @@ function FormsM(props) {
                           Når du svarer på undersøkelsen, vil du få tilgang til lærerikt innhold tilpasset ukens tema. Vi sender deg resultatet med en kort rapport om hovedfunn når undersøkelsen er ferdig. Hver uke inviterer vi en person med høy kompetanse innenfor en gren av internkommunikasjonsfaget til å lage undersøkelsen og innholdet. Denne UU er laget av Bjørn Glestad, og temaet er “Undersøkelse Om Undersøkelser”.</p>
                       </div>
                       <hr></hr>
-                      <TextField entry={entryOne} formData={formData} setFormData={setFormData}/>
+                      <TextField entry={entryMail} formData={formData} setFormData={setFormData}/>
                       <h3>{entryOneString}</h3>
-                          <Buttons entry={entryTwo} formData={formData} setFormData={setFormData} />
+                        <Buttons entry={entryOne} formData={formData} setFormData={setFormData} />
                         <h3>{entryTwoString}</h3>
-                          <Buttons entry={entryThree} formData={formData} setFormData={setFormData} />
+                          <Buttons entry={entryTwo} formData={formData} setFormData={setFormData} />
                         <h3>{entryThreeString}</h3>
-                          <Buttons entry={entryFour} formData={formData} setFormData={setFormData} />
+                          <Buttons entry={entryThree} formData={formData} setFormData={setFormData} />
                         <h3>{entryFourString}</h3>
-                          <Buttons entry={entryFive} formData={formData} setFormData={setFormData} />
+                          <Buttons entry={entryFour} formData={formData} setFormData={setFormData} />
                         <h3>{entryFiveString}</h3>
-                          <Buttons entry={entrySix} formData={formData} setFormData={setFormData} />
+                          <Buttons entry={entryFive} formData={formData} setFormData={setFormData} />
                         <h3>{entrySixString}</h3>
+                          <Buttons entry={entrySix} formData={formData} setFormData={setFormData} />
+                        <h3>{entrySevenString}</h3>
                           <Buttons entry={entrySeven} formData={formData} setFormData={setFormData} />
                       <GCap />
                       <button type="submit">SEND INN!</button>
