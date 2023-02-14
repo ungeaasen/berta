@@ -1,6 +1,25 @@
 
+@font-face {
+  font-family: "gilroy";
+  src: url("../public/gilroy.woff") format('woff');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "gilroyLight";
+  src: url("../public/gilroyLight.woff") format('woff');
+  font-weight: lighter;
+}
+
+@font-face {
+  font-family: "gilroyItalic";
+  src: url("../public/gilroyItalic.woff") format('woff');
+  font-weight: italic;
+}
+
 
 html,
+
 body, {
     width: 100%;
     height: 100%;
@@ -8,7 +27,9 @@ body, {
     padding: 0px;
     overflow-x: hidden;
     word-break: normal;
-    font-family: 'Helvetica', 'Arial', sans-serif !important;
+    font-family: 'gilroy', 'Arial', sans-serif !important;
+    color: #2C2C2C;
+    background-color: #F0ECE6;
 }
 
 /*------------------------------------------MODAL------------------------------------------*/
@@ -22,8 +43,7 @@ body, {
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  background-color:#2C2C2C; /* Black w/ opacity */
 }
 
 /* Modal Content */
@@ -62,6 +82,7 @@ body, {
 
 /*------------------------------------------FORM START------------------------------------------*/
 .form {
+  font-family: gilroyLight;
   .formWrapper {
     .buttons {
       display: flex;
@@ -91,14 +112,14 @@ body, {
     transition: border 0.4s linear;
     transition: background-color 0.6s linear;
     &:hover {
-      background-color: rgb(63, 109, 249);
-      border: 0.20em solid rgb(175, 193, 249)
+      background-color: #4BE8B9;
+      border: 0.20em solid #B5F5E2;
     }
     &:focus {
-      background-color: rgb(63, 109, 249);
+      background-color: #15A77B;
     }
     &:checked {
-      background-color: rgb(63, 109, 249);
+      background-color: #4BE8B9;
     }
   }
 
@@ -125,7 +146,7 @@ body, {
     @media screen and (max-width: 600px) {
       font-size: 18px;
     }
-    background-color: rgb(113, 219, 255);
+    background-color: #4BE8B9;
     border: none;
     font-size: 23px;
     text-transform: uppercase;
@@ -140,7 +161,7 @@ body, {
     display: flex;
 
   &:hover {
-    background-color: gray;
+    background-color: #15A77B;
   }
 }
 
@@ -192,6 +213,8 @@ h1 {
 }
 
 .tittel {
+  font-family: gilroy;
+  font-size: 33px;
   margin-bottom: 55px;
 }
 
@@ -201,6 +224,7 @@ h1 {
   }
   margin-bottom: 25vh;
   .introTekst {
+    font-family: gilroyLight;
       @media screen and (max-width: 600px) {
         font-size: 22px;
     }
@@ -216,6 +240,7 @@ h1 {
 }
 
 .quote {
+  font-family: gilroyItalic;
   @media screen and (max-width: 600px) {
     margin-bottom: 10vh;
   }
@@ -233,7 +258,7 @@ h1 {
     padding: 0vh 5vw;
     font-style: italic;
     font-size: 39px;
-    color: rgb(115, 114, 114);
+    color: #2C2C2C;
   }
   .quoter {
     text-align: center;

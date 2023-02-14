@@ -11,7 +11,6 @@ function Modal({show, notShowing, onClose}) {
     });
 
       const outsideClickClose = useCallback(event => {
-        console.log('You clicked outside')
         notShowing(false)
       }, [notShowing])
 

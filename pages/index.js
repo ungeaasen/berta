@@ -3,9 +3,9 @@ import AuthorIntro from 'components/AuthorIntro';
 import FormsM from '../components/FormsM';
 import Quote from '../components/Quote';
 import Head from 'next/head';
-import { getAllBlogs, getFrontpage } from 'lib/api';
+import { getAllBlogs, getFrontpage, getForms } from 'lib/api';
 
-export default function Home({blogs, frontpage}) {
+export default function Home({blogs, frontpage, surveys}) {
   return (
     <PageLayout>
       <Head>
@@ -18,14 +18,13 @@ export default function Home({blogs, frontpage}) {
       <div>
         <div className="tittel">
           <div href="#home">
-            <p>BERTA</p>
+            <p>Berta.no</p>
           </div>
         </div>
       </div>
       <AuthorIntro title={frontpage[0].title} ingress={frontpage[0].ingress}/>
       <Quote />
-      <FormsM />
-     { /*
+      <FormsM surveys={surveys}/>
       {
         blogs.map(blog =>
           <div key={blog.title}  className="mb-5" style={{ width: '18rem' }}>
@@ -41,7 +40,6 @@ export default function Home({blogs, frontpage}) {
           </div>
         )
       }
-    */}
     </PageLayout>
   )
 }
@@ -52,9 +50,10 @@ export default function Home({blogs, frontpage}) {
 export async function getStaticProps() {
   const blogs = await getAllBlogs();
   const frontpage = await getFrontpage();
+  const surveys = await getForms();
   return {
     props: {
-      blogs, frontpage
+      blogs, frontpage, surveys
     }
   }
 }
