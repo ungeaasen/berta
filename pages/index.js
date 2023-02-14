@@ -19,6 +19,7 @@ export default function Home({blogs, frontpage, surveys}) {
         <div className="tittel">
           <div href="#home">
             <p>Berta.no</p>
+            <span className='underline'></span>
           </div>
         </div>
       </div>

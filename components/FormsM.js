@@ -108,7 +108,7 @@ if(Object.keys(entryObj).length === 0) {
   return (
     <div>
     {surveys.map(survey =>
-        <div className="form">
+        <div key={survey.title} className="form">
           <div className="formWrapper" >
             {submit ? (
               <div className="afterForm">
@@ -131,8 +131,8 @@ if(Object.keys(entryObj).length === 0) {
                  </div>
                 </div>
                 {survey.survey.map(srv => 
-                  <div>
-                    <div>{srv.questionText}</div>
+                  <div key={srv.entry} >
+                    <div >{srv.questionText}</div>
                     <Buttons entry={srv.entry} formData={formData} setFormData={setFormData} />
                   </div>
                 )} 
