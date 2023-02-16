@@ -86,11 +86,15 @@ body, {
   margin: 0 400px 0 0;
   .formWrapper {
     .formText {
-      font-family: girloyLight;
-      font-size: 24px;
-      margin-bottom: 55px;
+      font-size: 28px;
+      margin-bottom: 90px;
       .boldText {
-        font-size: 28px;
+        font-family: gilroy;
+        font-size: 38px;
+        h4 {
+          margin-bottom: 5px !important;
+        }
+        
       }
     }
     .questionText {
@@ -102,6 +106,7 @@ body, {
       justify-content: space-around;
       background-color: rgb(211, 211, 211);
       border: 0;
+      margin-bottom: 80px;
     }
   }
   .g-recaptcha {
@@ -132,7 +137,7 @@ body, {
       background-color: #15A77B;
     }
     &:checked {
-      background-color: #4BE8B9;
+      background-color: #256653;
     }
   }
 
@@ -144,7 +149,7 @@ body, {
     outline: 0;
     letter-spacing: 0.2rem;
     font-size: 1.6rem;
-    background-color: rgb(113, 219, 255);
+    background-color: #4BE8B9;
 
     &:focus{
       background-color: rgb(63, 109, 249);
@@ -159,7 +164,7 @@ body, {
     @media screen and (max-width: 600px) {
       font-size: 18px;
     }
-    background-color: #4BE8B9;
+    background-color:#4BE8B9;
     border: none;
     font-size: 23px;
     text-transform: uppercase;
@@ -172,6 +177,7 @@ body, {
     cursor: pointer;
     justify-content: center;
     display: flex;
+   
 
   &:hover {
     background-color: #15A77B;
@@ -192,7 +198,7 @@ body, {
 }
 
 .underline {
-  height: 3px;
+  height: 2px;
   width: 125px;
   background-color: #4BE8B9;
   display: block;
@@ -283,19 +289,19 @@ h1 {
       font-size: 25px;
       padding: 0vh 5vw;
     }
-    padding: 0vh 5vw;
+    padding: 0vh 15vw;
     font-style: italic;
     font-size: 40px;
     color: #2C2C2C;
   }
   .quoter {
     text-align: center;
+    font-family: gilroyLight;
     @media screen and (max-width: 600px) {
       font-size: 19px;
       padding: 0vh 5vw;
     }
     padding: 0vh 10vw;
-    color: rgb(156, 156, 156);
     font-size: 24px;
   }
 }

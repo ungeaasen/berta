@@ -74,6 +74,7 @@ function FormsM({ surveys }) {
                 <div className="formText">
                   <div className="boldText">
                     <h4>{survey.title}</h4>
+                    <span className="underlineBig"></span>
                   </div>
                   <div>
                     <p>{survey.introText}</p>
