@@ -83,7 +83,20 @@ body, {
 /*------------------------------------------FORM START------------------------------------------*/
 .form {
   font-family: gilroyLight;
+  margin: 0 400px 0 0;
   .formWrapper {
+    .formText {
+      font-family: girloyLight;
+      font-size: 24px;
+      margin-bottom: 55px;
+      .boldText {
+        font-size: 28px;
+      }
+    }
+    .questionText {
+      font-size: 25px;
+      margin-bottom: 20px;
+    }
     .buttons {
       display: flex;
       justify-content: space-around;
@@ -166,9 +179,7 @@ body, {
 }
 
 .afterForm {
-  font-size: 35px;
-  color: green;
-  text-align: center;
+  font-size: 28px;
 }
 
 
@@ -178,6 +189,20 @@ body, {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+}
+
+.underline {
+  height: 3px;
+  width: 125px;
+  background-color: #4BE8B9;
+  display: block;
+}
+
+.underlineBig {
+  height: 3px;
+  width: 600px;
+  background-color: #4BE8B9;
+  display: block;
 }
 
 a {
@@ -190,15 +215,16 @@ h1 {
     font-size: 40px;
 }
   font-size: 80px;
+  margin-bottom: 5px !important;
 }
 
 .container {
-  margin: 0px 500px;
+  margin: 0px 200px;
   @media only screen and (max-width: 1600px) {
-    margin: 0px 250px;
+    margin: 0px 100px;
   }
   @media only screen and (max-width: 1200px) {
-    margin: 0px 120px;
+    margin: 0px 50px;
   }
   @media only screen and (max-width: 600px) {
     margin: 0px 15px;
@@ -215,7 +241,8 @@ h1 {
 .tittel {
   font-family: gilroy;
   font-size: 33px;
-  margin-bottom: 55px;
+  margin-bottom: 250px;
+  margin-top: 50px;
 }
 
 .ingress {
@@ -223,19 +250,20 @@ h1 {
       margin-bottom: 10vh;
   }
   margin-bottom: 25vh;
+  
   .introTekst {
     font-family: gilroyLight;
       @media screen and (max-width: 600px) {
         font-size: 22px;
     }
-    font-size: 25px;
+    font-size: 30px;
+    padding-right: 20vw;
   }
   .intro {
     @media screen and (max-width: 600px) {
-      //margin-bottom: 45px;
       margin-bottom: 4vh;
     }
-    //margin-bottom: 85px;
+    padding-right: 25vw;
   }
 }
 
@@ -257,7 +285,7 @@ h1 {
     }
     padding: 0vh 5vw;
     font-style: italic;
-    font-size: 39px;
+    font-size: 40px;
     color: #2C2C2C;
   }
   .quoter {

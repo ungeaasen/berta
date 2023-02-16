@@ -7,21 +7,20 @@ import GCap from "./GCaptcha";
 function FormsM({ surveys }) {
   const [show, setShow] = useState(false);
   const [submit, setSubmit] = useState(false);
+  const [formData, setFormData] = useState({});
 
   let entryObj = {}
 
-if(Object.keys(entryObj).length === 0) {
-  surveys.map(sr =>
-    sr.survey.map(s => {
-     entryObj[s.entry] = "";
-    })
-  );
-}
+  if(Object.keys(entryObj).length === 0) {
+    surveys.map(sr =>
+      sr.survey.map(s => {
+      entryObj[s.entry] = "";
+      })
+    );
+  }
 
-const [formData, setFormData] = useState({});
-
-const url = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSeEx1nVirOWry1YqENOR5JB6TTL7sEe8jgFh2PScb_pUxouIw";
-let siteUrl = `${url}/formResponse?`;
+  const url = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSeEx1nVirOWry1YqENOR5JB6TTL7sEe8jgFh2PScb_pUxouIw";
+  let siteUrl = `${url}/formResponse?`;
   
   Object.entries(formData).map(([key, value], i, arr) => {
     if (i !== arr.length - 1) {
@@ -74,15 +73,15 @@ let siteUrl = `${url}/formResponse?`;
                 >
                 <div className="formText">
                   <div className="boldText">
-                    <h3>{survey.title}</h3>
+                    <h4>{survey.title}</h4>
                   </div>
                   <div>
-                    <h4>{survey.introText}</h4>
+                    <p>{survey.introText}</p>
                  </div>
                 </div>
                 {survey.survey.map(srv => 
                   <div key={srv.entry} >
-                    <div >{srv.questionText}</div>
+                    <div className="questionText">{srv.questionText}</div>
                     <Buttons entry={srv.entry} formData={formData} setFormData={setFormData} />
                   </div>
                 )} 
@@ -91,7 +90,7 @@ let siteUrl = `${url}/formResponse?`;
               </form>
             )}
           </div>
-            <Modal show={show} notShowing={setShow} onClose={() => {setShow(false)}} />
+          <Modal show={show} notShowing={setShow} onClose={() => {setShow(false)}} />
         </div>
       )}
     </div>

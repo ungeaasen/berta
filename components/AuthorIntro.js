@@ -5,6 +5,7 @@ function AuthorIntro ({title, ingress}) {
     <div className="ingress">
       <div className="intro">
           <h1>{title}</h1>
+          <span className="underlineBig"></span>
       </div>
       <div className='introTekst'>
         <p>{ingress}</p>
