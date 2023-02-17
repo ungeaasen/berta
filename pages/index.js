@@ -1,4 +1,5 @@
 import PageLayout from 'components/PageLayout';
+import Footer from 'components/Footer';
 import AuthorIntro from 'components/AuthorIntro';
 import FormsM from '../components/FormsM';
 import Quote from '../components/Quote';
@@ -25,8 +26,10 @@ export default function Home({blogs, frontpage, surveys}) {
       </div>
       <AuthorIntro title={frontpage[0].title} ingress={frontpage[0].ingress}/>
       <Quote />
-      <FormsM surveys={surveys}/>{/*
-
+      <FormsM surveys={surveys}/>
+      <Footer />
+      {/*
+     
       
       {
         blogs.map(blog =>
