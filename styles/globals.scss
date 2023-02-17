@@ -1,4 +1,6 @@
 
+@import "./meyers.css";
+
 @font-face {
   font-family: "gilroy";
   src: url("../public/gilroy.woff") format('woff');
@@ -46,16 +48,12 @@ body, {
   background-color:#2C2C2C; /* Black w/ opacity */
 }
 
-/* Modal Content */
 .modal-content {
   background-color: #fefefe;
   margin: auto;
   padding: 20px;
   border: 1px solid #888;
   width: 50vw;
-  //display: grid;
-  //justify-content: center;
-  //text-align: center;
     p {
          @media screen and (max-width: 600px) {
         font-size: 18px;
@@ -63,10 +61,8 @@ body, {
     }
   }
 
-/* The Close Button */
 .close {
   color: #aaaaaa;
-  //justify-self: flex-end;
   float: right;
   font-size: 28px;
   font-weight: bold;
@@ -83,30 +79,40 @@ body, {
 /*------------------------------------------FORM START------------------------------------------*/
 .form {
   font-family: gilroyLight;
-  margin: 0 400px 0 0;
+  margin: 0 700px 0 0;
   .formWrapper {
     .formText {
-      font-size: 28px;
+      font-size: 24px;
       margin-bottom: 90px;
       .boldText {
         font-family: gilroy;
-        font-size: 38px;
-        h4 {
-          margin-bottom: 5px !important;
-        }
-        
+        font-size: 48px;
+        margin-bottom: 20px;
       }
     }
     .questionText {
-      font-size: 25px;
-      margin-bottom: 20px;
+      text-align: center;
+      font-size: 21px;
+      margin-bottom: 15px;
     }
     .buttons {
       display: flex;
       justify-content: space-around;
-      background-color: rgb(211, 211, 211);
+      background-color: rgba(211, 211, 211, 0.534);
       border: 0;
       margin-bottom: 80px;
+      .enig {
+        font-family: gilroy;
+        font-size: 20px;
+        align-self: center;
+        color: green;
+      }
+      .ikkeEnig {
+        font-family: gilroy;
+        font-size: 20px;
+        align-self: center;
+        color: red;
+      }
     }
   }
   .g-recaptcha {
@@ -122,6 +128,7 @@ body, {
       width: 1.15em;
       height: 1.15em;
     }
+    margin: 15px;
     width: 2.15em;
     height: 2.15em;
     border: 0.10em solid gray;
@@ -137,48 +144,47 @@ body, {
       background-color: #15A77B;
     }
     &:checked {
-      background-color: #256653;
+      background-color:  #15A77B;
     }
   }
 
-  input,
-  textarea {
-    width: 100%;
-    margin-top: 1rem;
-    border: none;
-    outline: 0;
-    letter-spacing: 0.2rem;
-    font-size: 1.6rem;
-    background-color: #4BE8B9;
+input,
+textarea {
+  width: 100%;
+  margin-top: 1rem;
+  border: none;
+  outline: 0;
+  letter-spacing: 0.2rem;
+  font-size: 1.6rem;
+  background-color: #4BE8B9;
 
-    &:focus{
-      background-color: rgb(63, 109, 249);
+  &:focus{
+    background-color: rgb(63, 109, 249);
 
-    }
-    &:active{
-      background-color: rgb(63, 109, 249);
-    }
   }
+  &:active{
+    background-color: rgb(63, 109, 249);
+  }
+}
 
-  button {
-    @media screen and (max-width: 600px) {
-      font-size: 18px;
-    }
-    background-color:#4BE8B9;
-    border: none;
-    font-size: 23px;
-    text-transform: uppercase;
-    letter-spacing: 1.8px;
-    width: 80%;
-    border-radius: 12px;
-    margin: auto;
-    padding: 0.6rem;
-    border: 2px solid transparent;
-    cursor: pointer;
-    justify-content: center;
-    display: flex;
-   
-
+button {
+  @media screen and (max-width: 600px) {
+    font-size: 18px;
+  }
+  background-color:#4BE8B9;
+  border: none;
+  font-size: 23px;
+  text-transform: uppercase;
+  letter-spacing: 1.8px;
+  width: 80%;
+  border-radius: 12px;
+  margin: auto;
+  padding: 0.6rem;
+  border: 2px solid transparent;
+  cursor: pointer;
+  justify-content: center;
+  display: flex;
+    
   &:hover {
     background-color: #15A77B;
   }
@@ -220,8 +226,7 @@ h1 {
   @media screen and (max-width: 600px) {
     font-size: 40px;
 }
-  font-size: 80px;
-  margin-bottom: 5px !important;
+  font-size: 100px;
 }
 
 .container {
@@ -256,20 +261,21 @@ h1 {
       margin-bottom: 10vh;
   }
   margin-bottom: 25vh;
-  
-  .introTekst {
-    font-family: gilroyLight;
-      @media screen and (max-width: 600px) {
-        font-size: 22px;
-    }
-    font-size: 30px;
-    padding-right: 20vw;
-  }
+
   .intro {
     @media screen and (max-width: 600px) {
       margin-bottom: 4vh;
     }
     padding-right: 25vw;
+    margin-bottom: 15px;
+  }
+  .introTekst {
+    font-family: gilroyLight;
+      @media screen and (max-width: 600px) {
+        font-size: 22px;
+    }
+    font-size: 27px;
+    padding-right: 20vw;
   }
 }
 
@@ -293,6 +299,7 @@ h1 {
     font-style: italic;
     font-size: 40px;
     color: #2C2C2C;
+    margin-bottom: 18px;
   }
   .quoter {
     text-align: center;
