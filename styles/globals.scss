@@ -19,6 +19,9 @@
   font-weight: italic;
 }
 
+strong {
+  font-weight: bold;
+}
 
 html,
 
@@ -144,6 +147,9 @@ h1 {
     font-size: 40px;
     color: #2C2C2C;
     margin-bottom: 18px;
+    .quoteSign {
+        font-size: 90px;
+    }
   }
   .quoter {
     text-align: center;
@@ -220,6 +226,9 @@ h1 {
 
 /*------------------------------------------FORM START------------------------------------------*/
 .form {
+  .surveyAward {
+    font-size: 25px;
+  }
   padding: 50px;
   background-color:#fefefe;
   font-family: gilroyLight;

@@ -1,15 +1,28 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Modal from "./Modal";
 import Buttons from "./RadioButtons";
 import TextField from "./TextField";
 import GCap from "./GCaptcha";
+import SanityBlockContent from "@sanity/block-content-to-react";
 
 function FormsM({ surveys }) {
   const [show, setShow] = useState(false);
   const [submit, setSubmit] = useState(false);
   const [formData, setFormData] = useState({});
 
+  const myRef = useRef(null)
+
   let entryObj = {}
+
+  const serializers = {
+    types: {
+      code: (props) => (
+        <pre data-language={props.node.language}>
+          <code>{props.node.code}</code>
+        </pre>
+      ),
+    },
+  }
 
   if(Object.keys(entryObj).length === 0) {
     surveys.map(sr =>
@@ -29,6 +42,14 @@ function FormsM({ surveys }) {
       siteUrl += key + "=" + value
     }
   })
+
+  useEffect(() => {
+    if(myRef && submit) {
+      myRef.current.scrollIntoView()
+      console.log("MYREFSS" + myRef )
+    }
+  }, [myRef])
+      
 
   function validateRecaptcha(e) {
     var response = grecaptcha.getResponse();
@@ -54,17 +75,19 @@ function FormsM({ surveys }) {
     });
   }
 
+  
+
   return (
     <div>
     {surveys.map(survey =>
         <div key={survey.title} className="form">
+          
           <div className="formWrapper" >
             {submit ? (
               <div className="afterForm">
-                <h3>
-                  Takk for din interresse! Berta skaper en positiv feedback-loop mellom medarbeidere og ledelse. Vi gjetter aldri frem løsninger, alle våre leveranser er datadrevet og frie for gjetning og antakelser. 
-                  Vi har spurt før vi gir svar.
-                </h3> 
+                <div ref={myRef} className="surveyAward">
+                  <SanityBlockContent blocks={survey.surveyAwardText} serializers={serializers} />
+                </div>
               </div>
               ) : (
               <form 
@@ -77,6 +100,7 @@ function FormsM({ surveys }) {
                     <h4>{survey.title}</h4>
                     <span className="underlineMedium"></span>
                   </div>
+                  {console.log(survey)}
                   <div>
                     <p>{survey.introText}</p>
                  </div>
