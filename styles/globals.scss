@@ -312,6 +312,11 @@ h1 {
         font-size: 48px;
         margin-bottom: 20px;
       }
+      h2 {
+        font-family: gilroy;
+        text-align: center ;
+        font-size: 26px;
+      }
     }
     .questionText {
       @media only screen and (max-width: 600px) {
@@ -353,7 +358,7 @@ h1 {
         padding-right: 5px;
         font-size: 20px;
         align-self: center;
-        color: rgb(192, 83, 83);
+        color: #E36AE6
       }
     }
   }

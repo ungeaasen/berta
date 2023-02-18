@@ -105,6 +105,7 @@ function FormsM({ surveys }) {
                   <div>
                     <p>{survey.introText}</p>
                  </div>
+                 <h2>Arbeidsro og produktivitet</h2>
                 </div>
                 {survey.survey.map(srv => 
                   <div key={srv.entry} >
