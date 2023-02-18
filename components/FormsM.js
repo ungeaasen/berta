@@ -114,6 +114,7 @@ function FormsM({ surveys }) {
                   </div>
                 )} 
                 <GCap />
+                <div className="sendText"><h3>Etter at du har svart på spørsmålene, får du tips og triks som er relevante for temaet som dekkes i undersøkelsen</h3></div>
                 <button type="submit">SEND INN!</button>
               </form>
             )}
