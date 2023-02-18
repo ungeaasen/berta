@@ -88,11 +88,12 @@ h1 {
     margin: 0px 45px;
   }
   @media only screen and (max-width: 600px) {
-    margin: 0px 5px;
+   // margin: 0px 5px;
+   margin: 0;
   }
   .wrapper {
       @media only screen and (max-width: 600px) {
-    margin: 0px 15px;
+    //margin: 0px 15px;
   }
     width: 100%;
     height: 100%;
@@ -105,18 +106,24 @@ h1 {
 .tittel {
   @media only screen and (max-width: 600px) {
     font-size: 12px;
-    margin-bottom: 50px;
-    margin-top: 10px;
+   // margin-bottom: 50px;
+    //margin-top: 10px;
+    margin: 10px 5px 50px 10px;
   }
   font-family: gilroy;
   font-size: 33px;
   margin-bottom: 250px;
   margin-top: 50px;
+  .underline {
+   width: 49px;
+   height: 2px;
+  }
 }
 
 .ingress {
-  @media screen and (max-width: 600px) {
-      margin-bottom: 50px;
+  @media only screen and (max-width: 600px) {
+     // margin-bottom: 50px;
+      margin: 0px 10px 100px 10px;
   }
   margin-bottom: 25vh;
 
@@ -126,6 +133,10 @@ h1 {
     }
     padding-right: 25vw;
     margin-bottom: 15px;
+    .underlineBig {
+      width: 150px;
+      height: 3px;
+    }
   }
   .introTekst {
     font-family: gilroyLight;
@@ -140,8 +151,8 @@ h1 {
 
 .quote {
   font-family: gilroyItalic;
-  @media screen and (max-width: 600px) {
-    margin-bottom: 5px;
+  @media only screen and (max-width: 600px) {
+    margin-bottom: 100px;
   }
   margin-bottom: 25vh;
  
@@ -256,7 +267,7 @@ h1 {
 .form {
   @media only screen and (max-width: 600px) {
     margin: 0px;
-    padding: 0px;
+    padding: 50px 5px;
   }
   padding: 50px;
   background-color:#fefefe;
@@ -274,11 +285,12 @@ h1 {
     .formTitle {
       @media only screen and (max-width: 600px) {
         font-size: 16px;
+        margin-bottom: 5px;
       }
       color: rgb(44,44,44,0.6);
       font-family: gilroyItalic;
       font-size: 22px;
-      margin-bottom: 5px;
+      margin-bottom: 8px;
     }
     .formText {
       @media only screen and (max-width: 600px) {
@@ -300,6 +312,7 @@ h1 {
       @media only screen and (max-width: 600px) {
         font-size: 16px;
         margin-bottom: 8px;
+        padding: 0px 10px;
       }
       text-align: center;
       font-size: 21px;
