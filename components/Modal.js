@@ -2,7 +2,7 @@ import { useEffect, useRef, useCallback } from "react";
 import useOutsideClick from "./useOutsideClick";
 
 
-function Modal({show, notShowing, onClose}) {
+function Modal({show, notShowing, onClose, text}) {
     const ref = useRef();
     console.log(notShowing)
 
@@ -17,9 +17,10 @@ function Modal({show, notShowing, onClose}) {
     return (
         <div id="myModal" className="modal" style={ show ? {display:'block'} : {display:'none'} }  >
             <div ref={ref} className="modal-content">
-                <button onClick={onClose} className="close">&times;</button>
-                <p>Vennligst gjør robot-testen!</p>
+                <span className="close"><button onClick={onClose} >&times;</button></span>
+                <span className="text"><h2>{text}</h2></span>
             </div>
+            
         </div>
     )
 }

@@ -7,6 +7,7 @@ import SanityBlockContent from "@sanity/block-content-to-react";
 
 function FormsM({ surveys }) {
   const [show, setShow] = useState(false);
+  const [showAward, setShowAward] = useState(false);
   const [submit, setSubmit] = useState(false);
   const [formData, setFormData] = useState({});
 
@@ -60,6 +61,8 @@ function FormsM({ surveys }) {
     } else {
         e.preventDefault();
         handleSubmit(e);
+        setShowAward(true);
+        myRef.current.scrollIntoView();
         return true;
     }
   }
@@ -67,6 +70,7 @@ function FormsM({ surveys }) {
   async function handleSubmit(e) {
     e.preventDefault();
     setSubmit(true);
+   
     const res = await fetch(siteUrl, {
       method: "POST",
       headers: {
@@ -75,17 +79,14 @@ function FormsM({ surveys }) {
     });
   }
 
-  
-
   return (
-    <div>
+    <div ref={myRef}>
     {surveys.map(survey =>
         <div key={survey.title} className="form">
-          
-          <div className="formWrapper" >
+          <div className="formWrapper">
             {submit ? (
               <div className="afterForm">
-                <div ref={myRef} className="surveyAward">
+                <div className="surveyAward">
                   <SanityBlockContent blocks={survey.surveyAwardText} serializers={serializers} />
                 </div>
               </div>
@@ -116,7 +117,8 @@ function FormsM({ surveys }) {
               </form>
             )}
           </div>
-          <Modal show={show} notShowing={setShow} onClose={() => {setShow(false)}} />
+          <Modal show={show} text="Vennligst bekreft at du ikke er helt robot :)" notShowing={setShow} onClose={() => {setShow(false)}} />
+          <Modal showAward={showAward} text="Takk for at du svarte! Vi sender deg snart en rapport! :)" notShowing={setShowAward} onClose={() => {setShowAward(false)}} />
         </div>
       )}
     </div>
