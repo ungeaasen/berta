@@ -70,9 +70,12 @@ a {
 }
 
 h1 {
-  @media screen and (max-width: 600px) {
-    font-size: 40px;
-}
+  @media only screen and (max-width: 1200px) {
+    font-size: 55px;
+  }
+  @media only screen and (max-width: 600px) {
+    font-size: 30px;
+  }
   font-size: 85px;
 }
 
@@ -82,12 +85,15 @@ h1 {
     margin: 0px 100px;
   }
   @media only screen and (max-width: 1200px) {
-    margin: 0px 50px;
+    margin: 0px 45px;
   }
   @media only screen and (max-width: 600px) {
-    margin: 0px 15px;
+    margin: 0px 5px;
   }
   .wrapper {
+      @media only screen and (max-width: 600px) {
+    margin: 0px 15px;
+  }
     width: 100%;
     height: 100%;
     padding: 0px;
@@ -97,6 +103,11 @@ h1 {
 }
 
 .tittel {
+  @media only screen and (max-width: 600px) {
+    font-size: 12px;
+    margin-bottom: 50px;
+    margin-top: 10px;
+  }
   font-family: gilroy;
   font-size: 33px;
   margin-bottom: 250px;
@@ -105,13 +116,13 @@ h1 {
 
 .ingress {
   @media screen and (max-width: 600px) {
-      margin-bottom: 10vh;
+      margin-bottom: 50px;
   }
   margin-bottom: 25vh;
 
   .intro {
     @media screen and (max-width: 600px) {
-      margin-bottom: 4vh;
+      margin-bottom: 0px;
     }
     padding-right: 25vw;
     margin-bottom: 15px;
@@ -120,7 +131,7 @@ h1 {
     font-family: gilroyLight;
     line-height: normal;
       @media screen and (max-width: 600px) {
-        font-size: 22px;
+        font-size: 16px;
     }
     font-size: 27px;
     padding-right: 20vw;
@@ -130,33 +141,36 @@ h1 {
 .quote {
   font-family: gilroyItalic;
   @media screen and (max-width: 600px) {
-    margin-bottom: 10vh;
+    margin-bottom: 5px;
   }
   margin-bottom: 25vh;
  
   .quoteContainer {
-    @media screen and (max-width: 600px) {
-      font-size: 25px;
-      padding: 0vh 4vw;
+    p {
+        @media only screen and (max-width: 600px) {
+          font-size: 17px;
+      }
+        @media only screen and (max-width: 1200px) {
+          font-size: 25px;
+      }
+      font-size: 40px;
     }
-    @media screen and (max-width: 1200px) {
-      font-size: 25px;
-      padding: 0vh 5vw;
+    @media only screen and (max-width: 600px) {
+      padding: 0vh 20px;
     }
     padding: 0vh 15vw;
     font-style: italic;
-    font-size: 40px;
     color: #2C2C2C;
     margin-bottom: 18px;
     .quoteSign {
-        font-size: 90px;
+        //font-size: 90px;
     }
   }
   .quoter {
     text-align: center;
     font-family: gilroyLight;
-    @media screen and (max-width: 600px) {
-      font-size: 19px;
+    @media only screen and (max-width: 600px) {
+      font-size: 12px;
       padding: 0vh 5vw;
     }
     padding: 0vh 10vw;
@@ -165,6 +179,9 @@ h1 {
 }
 
 .pageFooter {
+  @media only screen and (max-width: 600px) {
+    font-size: 16px;
+  }
   font-size: 30px;
   overflow: hidden;
   width: 100%;
@@ -237,42 +254,72 @@ h1 {
 
 /*------------------------------------------FORM START------------------------------------------*/
 .form {
-  .surveyAward {
-    font-size: 25px;
+  @media only screen and (max-width: 600px) {
+    margin: 0px;
+    padding: 0px;
   }
   padding: 50px;
   background-color:#fefefe;
   font-family: gilroyLight;
   margin: 0 500px 250px 0;
+  .surveyAward {
+    @media only screen and (max-width: 600px) {
+      font-size: 12px;
+      margin: 0px;
+    }
+    font-size: 25px;
+  }
+
   .formWrapper {
     .formTitle {
+      @media only screen and (max-width: 600px) {
+        font-size: 16px;
+      }
       color: rgb(44,44,44,0.6);
       font-family: gilroyItalic;
       font-size: 22px;
       margin-bottom: 5px;
     }
     .formText {
+      @media only screen and (max-width: 600px) {
+        font-size: 18px;
+      }
       font-size: 24px;
       margin-bottom: 90px;
       line-height: normal;
       .boldText {
+        @media only screen and (max-width: 600px) {
+          font-size: 28px;
+        }
         font-family: gilroy;
         font-size: 48px;
         margin-bottom: 20px;
       }
     }
     .questionText {
+      @media only screen and (max-width: 600px) {
+        font-size: 16px;
+        margin-bottom: 8px;
+      }
       text-align: center;
       font-size: 21px;
       margin-bottom: 15px;
     }
     .buttons {
+      @media only screen and (max-width: 600px) {
+        margin-bottom: 40px;
+      }
       display: flex;
       justify-content: space-around;
       //background-color: rgba(211, 211, 211, 0.534);
       border: 0;
       margin-bottom: 80px;
       .enig {
+        @media only screen and (max-width: 600px) {
+          font-size: 16px;
+          margin: 5px;
+        }
+        margin: 15px;
         font-family: gilroy;
         padding-left: 5px;
         font-size: 20px;
@@ -280,6 +327,10 @@ h1 {
         color: #4BE8B9;
       }
       .ikkeEnig {
+        @media only screen and (max-width: 600px) {
+          font-size: 16px;
+          margin: 5px;
+        }
         font-family: gilroy;
         padding-right: 5px;
         font-size: 20px;
@@ -300,6 +351,7 @@ h1 {
     @media screen and (max-width: 740px) {
       width: 1.15em;
       height: 1.15em;
+      margin: 4px;
     }
     margin: 15px;
     width: 2.15em;
