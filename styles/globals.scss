@@ -74,7 +74,7 @@ h1 {
     font-size: 55px;
   }
   @media only screen and (max-width: 600px) {
-    font-size: 30px;
+    font-size: 32px;
   }
   font-size: 85px;
 }
@@ -109,15 +109,16 @@ h1 {
    // margin-bottom: 50px;
     //margin-top: 10px;
     margin: 10px 5px 50px 10px;
+    .underline {
+      width: 49px;
+      height: 2px;
+     }
   }
   font-family: gilroy;
   font-size: 33px;
   margin-bottom: 250px;
   margin-top: 50px;
-  .underline {
-   width: 49px;
-   height: 2px;
-  }
+
 }
 
 .ingress {
@@ -130,13 +131,14 @@ h1 {
   .intro {
     @media screen and (max-width: 600px) {
       margin-bottom: 0px;
+      .underlineBig {
+        width: 150px;
+        height: 3px;
+      }
     }
     padding-right: 25vw;
     margin-bottom: 15px;
-    .underlineBig {
-      width: 150px;
-      height: 3px;
-    }
+
   }
   .introTekst {
     font-family: gilroyLight;
@@ -159,7 +161,7 @@ h1 {
   .quoteContainer {
     p {
         @media only screen and (max-width: 600px) {
-          font-size: 17px;
+          font-size: 18px !important;
       }
         @media only screen and (max-width: 1200px) {
           font-size: 25px;
@@ -167,7 +169,7 @@ h1 {
       font-size: 40px;
     }
     @media only screen and (max-width: 600px) {
-      padding: 0vh 20px;
+      padding: 0px 20px;
     }
     padding: 0vh 15vw;
     font-style: italic;
@@ -181,7 +183,7 @@ h1 {
     text-align: center;
     font-family: gilroyLight;
     @media only screen and (max-width: 600px) {
-      font-size: 12px;
+      font-size: 10px;
       padding: 0vh 5vw;
     }
     padding: 0vh 10vw;
@@ -202,7 +204,7 @@ h1 {
     justify-content: center;
     width: 100%;
     align-items: flex-end;
-    padding: 20px;
+    padding-bottom: 20px;
     .logo {
       display: flex;
       justify-content: flex-end;
@@ -267,9 +269,11 @@ h1 {
 .form {
   @media only screen and (max-width: 600px) {
     margin: 0px;
-    padding: 50px 5px;
+    padding: 10px 5px 50px 5px;
+    border-radius: 0%;
   }
   padding: 50px;
+  border-radius: 25px;
   background-color:#fefefe;
   font-family: gilroyLight;
   margin: 0 500px 250px 0;
@@ -277,6 +281,7 @@ h1 {
     @media only screen and (max-width: 600px) {
       font-size: 12px;
       margin: 0px;
+      padding: 0px 20px;
     }
     font-size: 25px;
   }
@@ -294,14 +299,14 @@ h1 {
     }
     .formText {
       @media only screen and (max-width: 600px) {
-        font-size: 18px;
+        font-size: 19px;
       }
       font-size: 24px;
       margin-bottom: 90px;
       line-height: normal;
       .boldText {
         @media only screen and (max-width: 600px) {
-          font-size: 28px;
+          font-size: 24px;
         }
         font-family: gilroy;
         font-size: 48px;
