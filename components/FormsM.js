@@ -105,10 +105,11 @@ function FormsM({ surveys }) {
                   <div>
                     <p>{survey.introText}</p>
                  </div>
-                 <h2>Arbeidsro og produktivitet</h2>
+                 
                 </div>
+                <h2>Arbeidsro og produktivitet</h2>
                 {survey.survey.map(srv => 
-                  <div key={srv.entry} >
+                  <div key={srv.entry}>
                     <div className="questionText">{srv.questionText}</div>
                     <Buttons entry={srv.entry} formData={formData} setFormData={setFormData} />
                   </div>
