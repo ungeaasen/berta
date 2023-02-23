@@ -5,6 +5,7 @@ import FormsM from '../components/FormsM';
 import Quote from '../components/Quote';
 import Head from 'next/head';
 import { getAllBlogs, getFrontpage, getForms } from 'lib/api';
+import Link from 'next/link';
 
 export default function Home({blogs, frontpage, surveys}) {
   return (
@@ -23,6 +24,7 @@ export default function Home({blogs, frontpage, surveys}) {
             berta.no
             <span className='underline'></span>
           </div>
+          <div><Link href="/guide/guide">Le Guide</Link></div>
         </div>
       </div>
       <AuthorIntro title={frontpage[0].title} ingress={frontpage[0].ingress}/>
