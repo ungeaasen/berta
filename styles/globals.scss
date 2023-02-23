@@ -76,7 +76,7 @@ a {
 
 h1 {
   @media only screen and (max-width: 600px) {
-    font-size: 30px;
+    font-size: 33px !important;
   }
   @media only screen and (max-width: 1200px) {
     font-size: 55px;
