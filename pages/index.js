@@ -11,7 +11,7 @@ export default function Home({blogs, frontpage, surveys}) {
     <PageLayout>
       <Head>
         <title>Berta internkommunikasjon</title>
-        <link rel="shortcut icon" href="/logoB2.svg" />
+        <link rel="shortcut icon" href="/logoBGrnPunkt1.svg" />
         <meta property="og:title" content="Det er insiden som teller." key="title" />
         <meta name="description" content="Eksperter på internkommunikasjon" />
         <meta name="keywords" content="Internkommunikasjon, Bedriftskommunikasjon, trivsel på arbeidet, klar kommunikasjon" />
