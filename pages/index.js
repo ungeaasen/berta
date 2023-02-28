@@ -24,7 +24,7 @@ export default function Home({blogs, frontpage, surveys}) {
             berta.no
             <span className='underline'></span>
           </div>
-          <div><Link href="/guide/guide">Le Guide</Link></div>
+          {/*<div><Link href="/guide/guide">Le Guide</Link></div>*/}
         </div>
       </div>
       <AuthorIntro title={frontpage[0].title} ingress={frontpage[0].ingress}/>

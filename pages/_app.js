@@ -6,8 +6,8 @@ import { useEffect } from "react";
 import * as gtag from "../components/gtag";
 
 function MyApp({ Component, pageProps }) {
-  const router = useRouter();
-
+  //const router = useRouter();
+{/*}
   useEffect(() => {
     const handleRouteChange = (url) => {
       gtag.pageview(url);
@@ -19,7 +19,7 @@ function MyApp({ Component, pageProps }) {
       router.events.off("routeChangeComplete", handleRouteChange);
     };
   }, [router.events]);
-
+*/}
   return (
     <>
       <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-SEPDQV6SSG"></Script>
