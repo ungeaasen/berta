@@ -366,10 +366,14 @@ h1 {
       .boldText {
         @media only screen and (max-width: 600px) {
           font-size: 21px;
+            .underlineMedium {
+              width: 80px;
+            }
         }
         font-family: gilroy;
         font-size: 48px;
         margin-bottom: 20px;
+
       }
 
     }
