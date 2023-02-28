@@ -3,9 +3,9 @@ const Quote = () => {
         <div className="quote">
             <div className="quoteContainer">
                 <p>
-                    <span className="quoteSign">&quot;</span>Internkommunikasjon er noe mange virksomheter undervurderer. 
+                    &quot;Internkommunikasjon er noe mange virksomheter undervurderer. 
                     Det å kommunisere like godt internt som eksternt, er et viktig virkemiddel for å lykkes.
-                    <span className="quoteSign">&quot;</span>
+                    &quot;
                 </p>
            
             </div>
