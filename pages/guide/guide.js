@@ -17,7 +17,7 @@ export default function Guide({ guide }) {
 		<PageLayout>
 		<div>
 			{guide.map(guide => 
-			<div className='guide'>
+			<div key="1" className='guide'>
 				<SanityBlockContent blocks={guide.guideTextBlock} serializers={serializers} />
 			</div>
 
