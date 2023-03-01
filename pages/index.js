@@ -13,9 +13,9 @@ export default function Home({blogs, frontpage, surveys}) {
       <Head>
         <title>Berta internkommunikasjon</title>
         <link rel="shortcut icon" href="/logoBGrnPunkt1.svg" />
-        <meta property="og:title" content="Det er insiden som teller." key="title" />
-        <meta name="description" content="Eksperter på internkommunikasjon" />
-        <meta name="keywords" content="Internkommunikasjon, Bedriftskommunikasjon, trivsel på arbeidet, klar kommunikasjon" />
+        <meta property="og:title" content="Berta internkommunikasjon" key="title" />
+        <meta name="description" content="Berta gjør virksomheter mer bevisst på hvordan ansatte kommuniserer innad. Vi gjør undersøkelser og identifiserer hvordan internkommunikasjonen deres fungerer – og leverer en rapport med alle nøkkelfunn." />
+        <meta name="keywords" content="Internkommunikasjon, Bedriftskommunikasjon, Organisasjonskommunikasjon, kommunikasjon, trivsel på arbeidet, klar kommunikasjon" />
         <meta name="author" content="Berta" />
       </Head>
       <div>
@@ -31,25 +31,7 @@ export default function Home({blogs, frontpage, surveys}) {
       <Quote />
       <FormsM surveys={surveys}/>
       <Footer />
-      {/*
-     
-      
-      {
-        blogs.map(blog =>
-          <div key={blog.title}  className="mb-5" style={{ width: '18rem' }}>
-            <div key={blog.subtitle}>
-              <h4>{blog.title}</h4>
-            </div>
-            <div>
-              {blog.subtitle}
-            </div>
-              <div>      
-                <a href="#">Card Link</a>
-            </div>
-          </div>
-        )
-      }
-    */}
+
     </PageLayout>
   )
 }
@@ -87,3 +69,23 @@ export async function getStaticProps() {
 // Dynamic Page
 // Created at request time (we can fetch data on server)
 // Little bit slower, the time depends on data you are fetching
+
+      {/*
+     
+      
+      {
+        blogs.map(blog =>
+          <div key={blog.title}  className="mb-5" style={{ width: '18rem' }}>
+            <div key={blog.subtitle}>
+              <h4>{blog.title}</h4>
+            </div>
+            <div>
+              {blog.subtitle}
+            </div>
+              <div>      
+                <a href="#">Card Link</a>
+            </div>
+          </div>
+        )
+      }
+    */}
