@@ -3,20 +3,10 @@ import '../styles/forms.scss';
 import Script from 'next/script';
 import CookieConsent, { Cookies, getCookieConsentValue } from "react-cookie-consent";
 import  { useState, useEffect } from "react";
-import ReactGA from 'react-ga';
+import * as ReactGA from "react-ga";
 
 function MyApp({ Component, pageProps }) {
   const [initGtag, setInitGtag] = useState(false);
-
-/*
-  const handleAcceptCookie = () => {
-    console.log("den kjørte før : " + getCookieConsentValue() )
-    //setInitGtag(true);
-    //if (process.env.REACT_APP_GOOGLE_ANALYTICS_ID) {
-      
-      //initGA(process.env.REACT_APP_GOOGLE_ANALYTICS_ID);
-    //}
-  };*/
 
   const initGA = (id) => {
     if (process.env.NODE_ENV === "production") {
@@ -35,13 +25,14 @@ function MyApp({ Component, pageProps }) {
     Cookies.remove("_gat");
     Cookies.remove("_gid");
   };
-
+/*
   useEffect(() => {
     const isConsent = getCookieConsentValue();
     if (isConsent === "true") {
       handleAcceptCookie();
     }
   }, []);
+*/
   return (
     <>{/*
       <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-SEPDQV6SSG"></Script>
@@ -60,11 +51,6 @@ function MyApp({ Component, pageProps }) {
           }}
         />
         */ }
-
-
-
-  <Script>  
-    </Script>
         <CookieConsent 
           declineButtonText="Nei takk!"
           buttonText="Den er god!" 	
