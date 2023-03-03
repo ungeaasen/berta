@@ -96,7 +96,7 @@ function FormsM({ surveys }) {
                   target="_self"
                 >
                 <div className="formText">
-                  <span className="formTitle"><h3>Ukas undersøkelse:</h3></span>
+                  <span className="formTitle"><h3>Ukas undersøkelse (beta):</h3></span>
                   <div className="boldText">
                     <h4>{survey.title}</h4>
                     <span className="underlineMedium"></span>
