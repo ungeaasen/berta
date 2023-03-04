@@ -9,13 +9,13 @@ function MyApp({ Component, pageProps }) {
   const [initGtag, setInitGtag] = useState(false);
 
   const initGA = (id) => {
-    if (process.env.NODE_ENV === "production") {
       ReactGA.initialize(id);
-    }
   };
+
   const handleAcceptCookie = () => {
     if (process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS) {
       initGA(process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS);
+      console.log("kjørte!" +  process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS)
     }
   };
 
