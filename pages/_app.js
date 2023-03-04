@@ -4,6 +4,7 @@ import Script from 'next/script';
 import CookieConsent, { Cookies, getCookieConsentValue } from "react-cookie-consent";
 import  { useState, useEffect } from "react";
 import * as ReactGA from "react-ga";
+import { Analytics } from '@vercel/analytics/react';
 
 function MyApp({ Component, pageProps }) {
   const [initGtag, setInitGtag] = useState(false);
@@ -65,7 +66,9 @@ function MyApp({ Component, pageProps }) {
           Berta bruker google analytics for å se hvor brukerne våre er fra.<br></br>
           Vi deler aldri informasjon om brukerne våre.
       </CookieConsent>
+      
       <Component {...pageProps} />
+      <Analytics />
     </>
   )
 }
