@@ -4,7 +4,6 @@ import useOutsideClick from "./useOutsideClick";
 
 function Modal({show, notShowing, onClose, text}) {
     const ref = useRef();
-    console.log(notShowing)
 
     useOutsideClick(ref, () => {
         outsideClickClose()

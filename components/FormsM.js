@@ -47,7 +47,6 @@ function FormsM({ surveys }) {
   useEffect(() => {
     if(myRef && submit) {
       myRef.current.scrollIntoView()
-      console.log("MYREFSS" + myRef )
     }
   }, [myRef])
       
@@ -101,7 +100,6 @@ function FormsM({ surveys }) {
                     <h4>{survey.title}</h4>
                     <span className="underlineMedium"></span>
                   </div>
-                  {console.log(survey)}
                   <div>
                     <p>{survey.introText}</p>
                  </div>
