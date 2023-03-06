@@ -274,6 +274,10 @@ h1 {
     font-family: gilroyLight;
     font-size: 25px;
   }
+  :hover {
+    color: #4BE8B9;
+    background-color: #fefefe;
+  }
 }
 
 .pageFooter {
@@ -367,7 +371,6 @@ h1 {
     padding: 25px;
    border-radius: 25px;
   }
-
   padding: 50px;
   border-radius: 25px;
   background-color:#fefefe;
@@ -427,9 +430,7 @@ h1 {
         font-family: gilroy;
         font-size: 48px;
         margin-bottom: 20px;
-
       }
-
     }
     .questionText {
       font-family: gilroySemiBold;

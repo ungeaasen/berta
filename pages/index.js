@@ -29,12 +29,16 @@ export default function Home({blogs, frontpage, surveys, files }) {
       </div>
       <AuthorIntro title={frontpage[0].title} ingress={frontpage[0].ingress}/>
       <Quote />
+      
       <div className='hero'>
-        <h3>E-bok: Internkommunikasjon & følelser</h3>
+      <a href={`${files[0].guideDownload}?dl=`}>
+       <h3>E-bok: Internkommunikasjon & følelser</h3>
         <span className='heroLink'>
-          <a href={`${files[0].guideDownload}?dl=`}>Last ned en praktisk guide til god internkommunikasjon</a>
+          Last ned vår praktiske guide til god internkommunikasjon
         </span>
+        </a>
       </div>
+      
       <FormsM surveys={surveys}/>
 
       <Footer />
