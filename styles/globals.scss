@@ -248,6 +248,34 @@ h1 {
   }
 }
 
+.hero {
+  @media only screen and (max-width: 600px) {
+    margin: 5vh 15px 5vh 15px;
+    border-left: solid 3px #4BE8B9;
+  }
+  overflow: hidden;
+  background-color: #fefefe;
+  margin: 25vh 0 25vh 0;
+  display: block;
+  border-left: solid 5px #4BE8B9;
+  padding: 25px 15px;
+  h3 {
+    @media only screen and (max-width: 600px) {
+      font-size: 26px;
+      margin-bottom: 10px;
+    }
+    font-size: 46px;
+    margin-bottom: 25px;
+  }
+  .heroLink {
+    @media only screen and (max-width: 600px) {
+      font-size: 16px;
+    }
+    font-family: gilroyLight;
+    font-size: 25px;
+  }
+}
+
 .pageFooter {
   @media only screen and (max-width: 600px) {
     font-size: 16px;
@@ -331,13 +359,13 @@ h1 {
   }
   @media only screen and (max-width: 1024px) {
     margin: 0px;
-    padding: 5px 3px 25px 3px;
-    border-radius: 0%;
+    padding: 25px;
+    border-radius: 25px;
   }
   @media only screen and (max-width: 1665px) {
     margin: 0px;
-    padding: 5px 3px 17px 3px;
-    border-radius: 0%;
+    padding: 25px;
+   border-radius: 25px;
   }
 
   padding: 50px;
@@ -425,6 +453,7 @@ h1 {
         margin-bottom: 40px;
       }
       display: flex;
+      flex-grow: 1;
       justify-content: space-around;
       border: 0;
       margin-bottom: 80px;
@@ -471,6 +500,7 @@ h1 {
     width: 2.15em;
     height: 2.15em;
     border: 0.10em solid gray;
+    
     border-radius: 50%;
     transform: translateY(-0.075em);
     transition: border 0.4s linear;
