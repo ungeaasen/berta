@@ -4,10 +4,10 @@ import AuthorIntro from 'components/AuthorIntro';
 import FormsM from '../components/FormsM';
 import Quote from '../components/Quote';
 import Head from 'next/head';
-import { getAllBlogs, getFrontpage, getForms } from 'lib/api';
+import { getAllBlogs, getFrontpage, getForms, getFile } from 'lib/api';
 import Link from 'next/link';
 
-export default function Home({blogs, frontpage, surveys}) {
+export default function Home({blogs, frontpage, surveys, files }) {
   return (
     <PageLayout>
       <Head>
@@ -30,6 +30,13 @@ export default function Home({blogs, frontpage, surveys}) {
       <AuthorIntro title={frontpage[0].title} ingress={frontpage[0].ingress}/>
       <Quote />
       <FormsM surveys={surveys}/>
+      <div>
+        <p>
+          {console.log("Files: " + files[0].guideDownload)}
+      
+        <a href={`{files[0].guideDownload}?dl=`}>Manuscript</a>
+        </p>
+      </div>
       <Footer />
 
     </PageLayout>
@@ -43,9 +50,10 @@ export async function getStaticProps() {
   const blogs = await getAllBlogs();
   const frontpage = await getFrontpage();
   const surveys = await getForms();
+  const files = await getFile();
   return {
     props: {
-      blogs, frontpage, surveys
+      blogs, frontpage, surveys, files
     }
   }
 }
