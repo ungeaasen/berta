@@ -33,8 +33,9 @@ function FormsM({ surveys }) {
     );
   }
 
-  const url = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSeEx1nVirOWry1YqENOR5JB6TTL7sEe8jgFh2PScb_pUxouIw";
-  let siteUrl = `${url}/formResponse?`;
+ // const url = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSeEx1nVirOWry1YqENOR5JB6TTL7sEe8jgFh2PScb_pUxouIw";
+ const url = "https://docs.google.com/forms/d/e/1FAIpQLSdRw97pbrgk1pRNNWpxWrxzj3KESnkI1urOazFHATnI02zHsg"; 
+ let siteUrl = `${url}/formResponse?`;
   
   Object.entries(formData).map(([key, value], i, arr) => {
     if (i !== arr.length - 1) {
@@ -95,7 +96,7 @@ function FormsM({ surveys }) {
                   target="_self"
                 >
                 <div className="formText">
-                  <span className="formTitle"><h3>Ukas undersøkelse (beta):</h3></span>
+                  <span className="formTitle"><h3>Aktiv undersøkelse:</h3></span>
                   <div className="boldText">
                     <h4>{survey.title}</h4>
                     <span className="underlineMedium"></span>
@@ -105,13 +106,22 @@ function FormsM({ surveys }) {
                  </div>
                  
                 </div>
-                <h2>Arbeidsro og produktivitet</h2>
-                {survey.survey.map(srv => 
+                <h2>Tema: Hva vil folk bli spurt om?</h2>
+                {/*survey.survey.map(srv => 
                   <div key={srv.entry}>
                     <div className="questionText">{srv.questionText}</div>
                     <Buttons entry={srv.entry} formData={formData} setFormData={setFormData} />
                   </div>
-                )} 
+                )*/} 
+                {
+                  survey.survey.map(srv =>
+                    <div>
+                      <div className="questionText">{srv.questionText}</div>
+                      <TextField entry={srv.entry} formData={formData} setFormData={setFormData}/>
+                    </div>
+                  )
+                }
+                
                 <GCap />
                 <div className="sendText"><h3>Etter at du har svart på spørsmålene, får du tips og triks som er relevante for temaet som dekkes i undersøkelsen</h3></div>
                 <button type="submit">SEND INN!</button>
