@@ -115,7 +115,7 @@ function FormsM({ surveys }) {
                 )*/} 
                 {
                   survey.survey.map(srv =>
-                    <div>
+                    <div key={srv.entry}>
                       <div className="questionText">{srv.questionText}</div>
                       <TextField entry={srv.entry} formData={formData} setFormData={setFormData}/>
                     </div>
