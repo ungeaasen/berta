@@ -1,6 +1,6 @@
 
 
-function AuthorIntro ({title, ingress}) {
+function AuthorIntro ({ title, ingress }) {
   return (
     <div className="ingress">
       <div className="intro">

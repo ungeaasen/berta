@@ -414,7 +414,7 @@ h1 {
         margin: 0px 15px;
       }
       color: rgb(44,44,44,0.6);
-      font-family: gilroyItalic;
+      font-family: gilroySemiBold;
       font-size: 22px;
       margin-bottom: 8px;
     }
@@ -526,8 +526,13 @@ h1 {
 
 input,
 textarea {
+  @media only screen and (max-width: 600px) {
+    font-size: 15px;
+    margin-bottom: 15px;
+  }
+  border-radius: 25px;
   width: 100%;
-  margin-top: 1rem;
+  margin-bottom: 35px;
   border: none;
   outline: 0;
   letter-spacing: 0.2rem;
@@ -570,7 +575,7 @@ button {
   @media only screen and (max-width: 600px) {
     font-size: 19px;
   }
-  font-family: gilroy;;
+  font-family: gilroySemiBold;
   font-size: 23px;
   padding: 45px;
 }
@@ -586,7 +591,14 @@ button {
 /*------------------------------------------GUIDE START------------------------------------------*/
 
 .guide  {
+  padding-right: 25vw;
   font-family: 'gilroyLight';
+  p {
+    line-height: normal;
+  }
+  a:hover{
+    color: #4BE8B9;
+  }
   h1 {
     font-family: 'gilroySemiBold';
     margin-bottom: 40px;
@@ -615,9 +627,13 @@ button {
   font-size: 25px;
   margin-bottom: 40px;
  }
+ ol {
+  margin-left: 28px;
+ }
 
  li {
   font-size: 23px;
+  line-height: 1.5;
   margin-bottom: 20px;
  }
  ::marker {

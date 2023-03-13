@@ -5,11 +5,29 @@ import PageLayout from 'components/PageLayout';
 export default function Guide({ guide }) {
 	const serializers = {
 		types: {
-		  code: (props) => (
-			<pre data-language={props.node.language}>
-			  <code>{props.node.code}</code>
-			</pre>
-		  ),
+			block: (props) => {
+				const { node, children } = props
+				const { style, _key } = node
+		  
+				if (/^h\d/.test(style)) {
+				  const HeadingTag = style;
+				  // Even though HTML5 allows id to start with a digit, we append it with a letter to avoid various JS methods to act up and make problems
+				  const headingId = `h${_key}`;
+				  return (
+					<HeadingTag id={headingId}>{children}
+					 
+					</HeadingTag>
+					)
+				}
+				// ... you can put in other overrides here
+
+				return <p>{children}</p>
+				
+				//return PortableText.defaultSerializers.types.block(props)
+				// or return the default ones 👇
+				
+			  }
+			 
 		},
 	  }
 

@@ -11,9 +11,9 @@ function FormsM({ surveys }) {
   const [submit, setSubmit] = useState(false);
   const [formData, setFormData] = useState({});
 
-  const myRef = useRef(null)
+  const myRef = useRef(null);
 
-  let entryObj = {}
+  let entryObj = {};
 
   const serializers = {
     types: {
@@ -106,7 +106,7 @@ function FormsM({ surveys }) {
                  </div>
                  
                 </div>
-                <h2>Tema: Hva vil folk bli spurt om?</h2>
+                <h2></h2>
                 {/*survey.survey.map(srv => 
                   <div key={srv.entry}>
                     <div className="questionText">{srv.questionText}</div>
@@ -121,7 +121,6 @@ function FormsM({ surveys }) {
                     </div>
                   )
                 }
-                
                 <GCap />
                 <div className="sendText"><h3>Etter at du har svart på spørsmålene, får du tips og triks som er relevante for temaet som dekkes i undersøkelsen</h3></div>
                 <button type="submit">SEND INN!</button>
