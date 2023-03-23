@@ -160,10 +160,10 @@ h1 {
       height: 2px;
      }
   }
-  font-family: gilroy;
-  font-size: 33px;
-  margin-bottom: 250px;
-  margin-top: 50px;
+font-family: gilroy;
+font-size: 33px;
+margin-bottom: 250px;
+margin-top: 50px;
 
 }
 
@@ -191,19 +191,19 @@ h1 {
         height: 3px;
       }
     }
-    padding-right: 25vw;
-    margin-bottom: 15px;
+  padding-right: 25vw;
+  margin-bottom: 15px;
 
   }
   .introTekst {
     @media screen and (max-width: 600px) {
         font-size: 16px;
     }
-    font-family: gilroyLight;
-    line-height: normal;
-    font-size: 27px;
-    padding-right: 20vw;
-    max-width: 1600px;
+  font-family: gilroyLight;
+  line-height: normal;
+  font-size: 27px;
+  padding-right: 20vw;
+  max-width: 1600px;
   }
 }
 
@@ -227,8 +227,6 @@ h1 {
       @media only screen and (max-width: 1200px) {
         font-size: 25px !important;
     }
-    
-    
     @media only screen and (max-width: 600px) {
       padding: 0px 20px;
     }
@@ -254,6 +252,7 @@ h1 {
       font-family: gilroyLight;
       padding: 0vh 10vw;
       font-size: 18px;
+      max-width: 1200px;
   }
 }
 

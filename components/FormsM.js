@@ -34,7 +34,11 @@ function FormsM({ surveys }) {
   }
 
  // const url = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSeEx1nVirOWry1YqENOR5JB6TTL7sEe8jgFh2PScb_pUxouIw";
- const url = "https://docs.google.com/forms/d/e/1FAIpQLSdRw97pbrgk1pRNNWpxWrxzj3KESnkI1urOazFHATnI02zHsg"; 
+ // const url = "https://docs.google.com/forms/d/e/1FAIpQLSdRw97pbrgk1pRNNWpxWrxzj3KESnkI1urOazFHATnI02zHsg"; '
+ 
+ let url = "";
+ {surveys.map(survey => {url = survey.surveyURL})}
+ 
  let siteUrl = `${url}/formResponse?`;
   
   Object.entries(formData).map(([key, value], i, arr) => {
@@ -104,15 +108,8 @@ function FormsM({ surveys }) {
                   <div>
                     <p>{survey.introText}</p>
                  </div>
-                 
-                </div>
+                 </div>
                 <h2></h2>
-                {/*survey.survey.map(srv => 
-                  <div key={srv.entry}>
-                    <div className="questionText">{srv.questionText}</div>
-                    <Buttons entry={srv.entry} formData={formData} setFormData={setFormData} />
-                  </div>
-                )*/} 
                 {
                   survey.survey.map(srv =>
                     <div key={srv.entry} className="texts">
