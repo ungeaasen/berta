@@ -115,8 +115,11 @@ function FormsM({ surveys }) {
                 )*/} 
                 {
                   survey.survey.map(srv =>
-                    <div key={srv.entry}>
-                      <div className="questionText">{srv.questionText}</div>
+                    <div key={srv.entry} className="texts">
+                      <div className="questionText">
+                      <SanityBlockContent blocks={srv.questionText} serializers={serializers} />
+                        {srv.questionText.map(txt => {txt})}
+                        </div>
                       <TextField entry={srv.entry} formData={formData} setFormData={setFormData}/>
                     </div>
                   )

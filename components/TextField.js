@@ -9,8 +9,8 @@ function TextField({entry, formData, setFormData}) {
       }));
     };
   return (
-  <fieldset>
-      <label htmlFor={entry}>Svar:</label>
+  <fieldset className="textArea">
+      <label htmlFor={entry}></label>
       <textarea
           required
           id={entry}

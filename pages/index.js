@@ -6,6 +6,7 @@ import Quote from '../components/Quote';
 import Head from 'next/head';
 import { getAllBlogs, getFrontpage, getForms, getFile } from 'lib/api';
 import Link from 'next/link';
+import Image from 'next/image'
 
 export default function Home({blogs, frontpage, surveys, files }) {
   return (
@@ -32,9 +33,11 @@ export default function Home({blogs, frontpage, surveys, files }) {
       
       <div className='hero'>
       <a href={`${files[0].guideDownload}?dl=`}>
-       <h3>E-bok: Internkommunikasjon & følelser</h3>
-        <span className='heroLink'>
-          Last ned vår praktiske guide til god internkommunikasjon
+      <span className='heroLink'><h3>E-bok: Internkommunikasjon 101</h3>
+          Last ned vår praktiske guide til god internkommunikasjon!
+        </span>
+        <span className='img'>
+        <Image src="/book.svg" alt="SVG as an image" width={150} height={150} />
         </span>
         </a>
       </div>
