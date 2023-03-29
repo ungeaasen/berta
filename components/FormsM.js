@@ -55,7 +55,6 @@ function FormsM({ surveys }) {
     }
   }, [myRef])
       
-
   function validateRecaptcha(e) {
     var response = grecaptcha.getResponse();
     if (response.length === 0) {
@@ -122,7 +121,8 @@ function FormsM({ surveys }) {
                   )
                 }
                 <GCap />
-                <div className="sendText"><h3>Etter at du har svart på spørsmålene, får du tips og triks som er relevante for temaet som dekkes i undersøkelsen</h3></div>
+                <div className="sendText">
+                  <h3></h3></div>
                 <button type="submit">SEND INN!</button>
               </form>
             )}

@@ -329,6 +329,60 @@ margin-top: 50px;
     }
   }
 }
+/*------------------------------------------CARD------------------------------------------*/
+.cards {
+  font-family: gilroyLight;
+  line-height: normal;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12%;
+  margin-bottom: 250px;
+  width: 100%;
+  overflow: hidden;
+  .cardItem {
+    
+    .top {
+      border-radius: 15px;
+      width: 100%;
+      height: 75px;
+      background-color: $bertaGreen;
+      margin-bottom: 15px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      .icon {
+        padding-left: 10px;
+      }
+      .title {
+        font-family: gilroySemiBold;
+        padding-left: 10px;
+      }
+    }
+    .cardContent {
+
+        font-size: 20px;
+  
+      display: grid;
+      grid-template-columns: 1fr;
+      padding: 20px;
+      .cardName {
+        font-family: gilroySemiBold;
+        font-size: 21px;
+        padding-bottom: 12px;
+        .cardTitle {
+          padding-right: 10px;
+        }
+      }
+    }
+    border-radius: 15px;
+    display: inline-grid;
+    grid-template-rows: auto;
+    //padding: 5px;
+    background-color: white;
+  }
+}
+/*------------------------------------------CARD END------------------------------------------*/
+
 
 /*------------------------------------------MODAL------------------------------------------*/
 .modal {
@@ -681,12 +735,31 @@ button {
   font-size: 26px;
   margin-bottom: 10px;
  }
-
-  p {
+ p {
       font-size: 23px;
   }
 }
 /*------------------------------------------GUIDE END------------------------------------------*/
+/*------------------------------------------ABOUT START------------------------------------------*/
+.about {
+  border-left: solid 21px $bertaGreen;
+  line-height: normal;
+  padding: 20px;
+  margin-bottom: 250px;
+  font-family: gilroyLight;
+  background-color: #F5F5F5;
+  h2 {
+    font-family: gilroy;
+    font-size: 36px;
+  }
+  h4 {
+    font-size: 32px;
+  }
+  p {
+    font-size: 28px;
+  }
+}
+/*------------------------------------------ABOUT END------------------------------------------*/
 
 
 

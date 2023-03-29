@@ -3,12 +3,14 @@ import Footer from 'components/Footer';
 import AuthorIntro from 'components/AuthorIntro';
 import FormsM from '../components/FormsM';
 import Quote from '../components/Quote';
+import Hero from 'components/Hero';
 import Head from 'next/head';
-import { getAllBlogs, getFrontpage, getForms, getFile } from 'lib/api';
+import { getAllBlogs, getFrontpage, getForms, getFile, getAbout, getCards } from 'lib/api';
 import Link from 'next/link';
-import Image from 'next/image'
+import Card from '../components/Cards';
+import About from 'components/About';
 
-export default function Home({blogs, frontpage, surveys, files }) {
+export default function Home({blogs, frontpage, surveys, files, about, cards }) {
   return (
     <PageLayout>
       <Head>
@@ -29,24 +31,13 @@ export default function Home({blogs, frontpage, surveys, files }) {
         </div>
       </div>
       <AuthorIntro title={frontpage[0].title} ingress={frontpage[0].ingress}/>
+      <Card cards={cards} />
       <Quote />
-      
-      <div className='hero'>
-      <a href={`${files[0].guideDownload}?dl=`}>
-      <span className='heroLink'><h3>E-bok: Internkommunikasjon 101</h3>
-          Last ned vår praktiske guide til god internkommunikasjon!
-        </span>
-        <span className='img'>
-        <Image src="/book.svg" alt="SVG as an image" width={150} height={150} />
-        </span>
-        </a>
-      </div>
-      
-      <FormsM surveys={surveys}/>
-
+      <Hero content={frontpage} files={files} />
+      <FormsM surveys={surveys} />
+      <About content={about} />
       <Footer />
-
-    </PageLayout>
+      </PageLayout>
   )
 }
 
@@ -58,9 +49,11 @@ export async function getStaticProps() {
   const frontpage = await getFrontpage();
   const surveys = await getForms();
   const files = await getFile();
+  const about = await getAbout();
+  const cards = await getCards();
   return {
     props: {
-      blogs, frontpage, surveys, files
+      blogs, frontpage, surveys, files, about, cards
     }
   }
 }
