@@ -37,6 +37,7 @@ html,
   
 body, {
     width: 100%;
+    max-width: 2100px;
     height: 100%;
     margin: 0px;
     padding: 0px;
@@ -44,7 +45,7 @@ body, {
     word-break: normal;
     font-family: 'gilroy', 'Arial', sans-serif !important;
     line-height: normal;
-    color: #2C2C2C;
+    color: $bertaBlack;
     background-color: $bertaWhite;
     scroll-behavior: smooth;
 }
@@ -116,6 +117,10 @@ h1 {
   }
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 .container {
   margin: 0px 200px;
   @media only screen and (max-width: 1600px) {
@@ -143,8 +148,6 @@ h1 {
 .tittel {
   @media only screen and (max-width: 600px) {
     font-size: 12px;
-   // margin-bottom: 50px;
-    //margin-top: 10px;
     margin: 10px 5px 50px 10px;
     .underline {
       width: 39px;
@@ -164,12 +167,11 @@ font-family: gilroy;
 font-size: 33px;
 margin-bottom: 250px;
 margin-top: 50px;
-
 }
 
 .ingress {
   @media only screen and (max-width: 600px) {
-      margin: 0px 10px 100px 10px;
+      margin: 0px 10px 50px 10px;
   }
   @media only screen and (max-width: 1024px) {
     margin: 0px 10px 100px 10px;
@@ -197,7 +199,7 @@ margin-top: 50px;
   }
   .introTekst {
     @media screen and (max-width: 600px) {
-        font-size: 16px;
+        font-size: 18px;
     }
   font-family: gilroyLight;
   line-height: normal;
@@ -210,7 +212,7 @@ margin-top: 50px;
 .quote {
   font-family: gilroyItalic;
   @media only screen and (max-width: 600px) {
-    margin-bottom: 100px;
+    margin-bottom: 50px;
     padding: 0px 30px;
   }
   @media only screen and (max-width: 1024px) {
@@ -221,7 +223,7 @@ margin-top: 50px;
   .quoteContainer {
     @media only screen and (max-width: 600px) {
       p {
-          font-size: 19px !important;
+          font-size: 24px !important;
         }
     }
       @media only screen and (max-width: 1200px) {
@@ -258,7 +260,7 @@ margin-top: 50px;
 
 .hero {
   @media only screen and (max-width: 600px) {
-    margin: 10px 10px 100px;
+    margin: 10px 0px 50px;
     border-left: solid 3px #4BE8B9;
   }
   .img {
@@ -331,16 +333,34 @@ margin-top: 50px;
 }
 /*------------------------------------------CARD------------------------------------------*/
 .cards {
+  @media only screen and (max-width: 600px) {
+    //display: grid; 
+    grid-template-columns: 1fr;
+    margin-bottom: 25px;
+  }
+  @media only screen and (max-width: 1024px) {
+    grid-template-columns: 1fr 1fr;
+    gap: 3%;
+  }
   font-family: gilroyLight;
   line-height: normal;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 12%;
+  gap: 5%;
   margin-bottom: 250px;
   width: 100%;
   overflow: hidden;
   .cardItem {
-    
+    @media only screen and (max-width: 600px) {
+      margin-bottom: 25px;
+     p {
+      font-size: 16px;
+     }
+     ol {
+      font-size: 16px;
+     }
+    }
+   
     .top {
       border-radius: 15px;
       width: 100%;
@@ -359,17 +379,19 @@ margin-top: 50px;
       }
     }
     .cardContent {
-
-        font-size: 20px;
-  
+      font-size: 20px;
       display: grid;
       grid-template-columns: 1fr;
       padding: 20px;
       .cardName {
+        @media only screen and (max-width: 600px) {
+          font-size: 17px;
+        }
         font-family: gilroySemiBold;
         font-size: 21px;
         padding-bottom: 12px;
         .cardTitle {
+
           padding-right: 10px;
         }
       }
@@ -377,8 +399,10 @@ margin-top: 50px;
     border-radius: 15px;
     display: inline-grid;
     grid-template-rows: auto;
-    //padding: 5px;
     background-color: white;
+  }
+  ol {
+    line-height: normal;
   }
 }
 /*------------------------------------------CARD END------------------------------------------*/
@@ -639,7 +663,6 @@ button {
   @media screen and (max-width: 600px) {
     font-size: 18px;
   }
-  //background-color:#4BE8B9;
   border: none;
   font-size: 23px;
   text-transform: uppercase;
@@ -741,7 +764,13 @@ button {
 }
 /*------------------------------------------GUIDE END------------------------------------------*/
 /*------------------------------------------ABOUT START------------------------------------------*/
-.about {
+.about {    
+    @media only screen and (max-width: 600px) {
+      padding: 5px;
+      border-left: solid 5px $bertaGreen;
+      margin-bottom: 50px;
+    }
+
   border-left: solid 21px $bertaGreen;
   line-height: normal;
   padding: 20px;
@@ -749,13 +778,22 @@ button {
   font-family: gilroyLight;
   background-color: #F5F5F5;
   h2 {
+    @media only screen and (max-width: 600px) {
+      font-size: 33px;
+    }
     font-family: gilroy;
     font-size: 36px;
   }
   h4 {
+    @media only screen and (max-width: 600px) {
+      font-size: 21px;
+    }
     font-size: 32px;
   }
   p {
+    @media only screen and (max-width: 600px) {
+      font-size: 19px;
+    }
     font-size: 28px;
   }
 }

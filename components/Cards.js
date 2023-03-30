@@ -34,7 +34,6 @@ export default function Card({ cards }) {
                             <span className='cardTitle'>{card.title} </span>
                         </span>
                         <SanityBlockContent blocks={ card.content } serializers={serializers} />
-                        <span className='cardTitle'><Image className="cardIcon" src="/egg.svg" alt="SVG as an image" width={23} height={23} /> Oppskrift </span>
                         <span>  <Image src="/logoBGrnPunkt1.svg" alt="" width={35} height={35} /></span>
                     </div>
                 </div>

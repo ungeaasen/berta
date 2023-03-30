@@ -99,7 +99,6 @@ function FormsM({ surveys }) {
                   target="_self"
                 >
                 <div className="formText">
-                  <span className="formTitle"><h3>Aktiv undersøkelse:</h3></span>
                   <div className="boldText">
                     <h4>{survey.title}</h4>
                     <span className="underlineMedium"></span>
@@ -108,7 +107,6 @@ function FormsM({ surveys }) {
                     <p>{survey.introText}</p>
                  </div>
                  </div>
-                <h2></h2>
                 {
                   survey.survey.map(srv =>
                     <div key={srv.entry} className="texts">

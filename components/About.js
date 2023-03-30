@@ -14,8 +14,8 @@ export default function About({ content }) {
     return (
         <div className="about">
             { content.map(cont => 
-             <SanityBlockContent key="1" blocks={cont.content} serializers={serializers} />
-             )}
+              <SanityBlockContent key="1" blocks={cont.content} serializers={serializers} />
+            )}
         </div>
     )
 }
