@@ -210,7 +210,6 @@ margin-top: 50px;
 }
 
 .quote {
-  font-family: gilroyItalic;
   @media only screen and (max-width: 600px) {
     margin-bottom: 50px;
     padding: 0px 30px;
@@ -218,6 +217,7 @@ margin-top: 50px;
   @media only screen and (max-width: 1024px) {
     margin-bottom: 100px;
   }
+  font-family: gilroyItalic;
   margin-bottom: 250px;
  
   .quoteContainer {
@@ -336,8 +336,6 @@ margin-top: 50px;
   @media only screen and (max-width: 600px) {
     display: grid;
     grid-template-columns: auto !important;
-    margin-bottom: 25px;
-    margin: 0px 5px;
   }
   @media only screen and (max-width: 1024px) {
     grid-template-columns: 1fr 1fr;
@@ -347,13 +345,15 @@ margin-top: 50px;
   line-height: normal;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
   gap: 5%;
   margin-bottom: 250px;
   width: 100%;
-  overflow: hidden;
+  height: auto;
   .cardItem {
     @media only screen and (max-width: 600px) {
-      margin-bottom: 25px;
+      //margin-bottom: 25px;
+      margin: 0px 15px 0px 15px;
      p {
       font-size: 16px;
      }
@@ -361,7 +361,6 @@ margin-top: 50px;
       font-size: 16px;
      }
     }
-   
     .top {
       border-radius: 15px;
       width: 100%;
@@ -392,14 +391,13 @@ margin-top: 50px;
         font-size: 21px;
         padding-bottom: 12px;
         .cardTitle {
-
           padding-right: 10px;
         }
       }
     }
     border-radius: 15px;
-    display: inline-grid;
-    grid-template-rows: auto;
+   // display: inline-grid;
+   // grid-template-rows: auto;
     background-color: white;
   }
   ol {
@@ -524,7 +522,7 @@ margin-top: 50px;
     .formText {
       @media only screen and (max-width: 600px) {
         font-size: 19px;
-        margin: 0px 15px;
+        margin: 0px 0px;
       }
       font-size: 24px;
       margin-bottom: 90px;
@@ -548,19 +546,13 @@ margin-top: 50px;
       justify-content: center;
     }
     .questionText {
-      font-family: gilroySemiBold;
       @media only screen and (max-width: 600px) {
-        font-size: 12px !important;
         margin-bottom: 8px;
-        padding: 0px 40px !important;
       }
       @media only screen and (max-width: 1024px) {
         font-size: 19px;
         margin-bottom: 8px;
-        padding: 0px 80px;
       }
-      padding: 0px 120px;
-      text-align: center;
       font-size: 21px;
       margin-bottom: 15px;
     }
@@ -605,7 +597,7 @@ margin-top: 50px;
   }
 }
 .textArea {
-  width: 100%;
+  //width: 100%;
 }
 
   input[type="radio"] {
