@@ -1,5 +1,5 @@
 import PageLayout from 'components/PageLayout';
-import Footer from 'components/Footer';
+
 import AuthorIntro from 'components/AuthorIntro';
 import FormsM from '../components/FormsM';
 import Quote from '../components/Quote';
@@ -36,7 +36,7 @@ export default function Home({blogs, frontpage, surveys, files, about, cards }) 
       <Hero content={frontpage} files={files} />
       <FormsM surveys={surveys} />
       <About content={about} />
-      <Footer />
+      
       </PageLayout>
   )
 }

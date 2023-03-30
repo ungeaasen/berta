@@ -82,13 +82,33 @@ a {
 }
 
 h1 {
-  @media only screen and (max-width: 600px) {
-    font-size: 33px !important;
+  font-size: 25px;
+  @media only screen and (min-width: 360px) {
+    font-size: 37px;
   }
-  @media only screen and (max-width: 1200px) {
+  @media only screen and (min-width: 600px) {
     font-size: 55px;
   }
-  font-size: 85px;
+  @media only screen and (min-width: 800px) {
+    font-size: 66px;
+  }
+  @media only screen and (min-width: 1000px) {
+    font-size: 99px;
+  }
+
+  @media only screen and (min-width: 1400px) {
+    font-size: 120px;
+  }
+
+  @media only screen and (min-width: 1600px) {
+    font-size: 135px;
+  }
+
+  @media only screen and (min-width: 2000px) {
+    font-size: 166px;
+  }
+  
+  font-family: gilroySemiBold;
 }
 
 .CookieConsent {
@@ -122,16 +142,12 @@ body::-webkit-scrollbar {
 }
 
 .container {
-  margin: 0px 200px;
-  @media only screen and (max-width: 1600px) {
-    margin: 0px 100px;
+  margin: 0px 5px;
+  @media only screen and (min-width: 600px) {
+    margin: 0px 10px;
   }
-  @media only screen and (max-width: 1200px) {
+  @media only screen and (min-width: 1200px) {
     margin: 0px 45px;
-  }
-  @media only screen and (max-width: 600px) {
-   // margin: 0px 5px;
-   margin: 0;
   }
   .wrapper {
       @media only screen and (max-width: 600px) {
@@ -198,12 +214,18 @@ margin-top: 50px;
 
   }
   .introTekst {
-    @media screen and (max-width: 600px) {
-        font-size: 18px;
+    font-size: 18px;
+    @media screen and (min-width: 600px) {
+      font-size: 33px;
+    }
+    @media screen and (min-width: 800px) {
+      font-size: 44px;
+    }
+    @media screen and (min-width: 1200px) {
+      font-size: 55px;
     }
   font-family: gilroyLight;
   line-height: normal;
-  font-size: 27px;
   padding-right: 20vw;
   max-width: 1600px;
   }
@@ -221,13 +243,16 @@ margin-top: 50px;
   margin-bottom: 250px;
  
   .quoteContainer {
-    @media only screen and (max-width: 600px) {
+    font-size: 28px;
+    @media only screen and (min-width: 600px) {
       p {
-          font-size: 24px !important;
+          font-size: 44px;
         }
     }
-      @media only screen and (max-width: 1200px) {
-        font-size: 25px !important;
+      @media only screen and (min-width: 1200px) {
+        p {
+            font-size: 66px;
+        }
     }
     @media only screen and (max-width: 600px) {
       padding: 0px 20px;
@@ -235,8 +260,8 @@ margin-top: 50px;
     @media only screen and (max-width: 1024px) {
       padding: 0px 10px;
     }
-      font-size: 40px;
-      padding: 0vh 15vw;
+      
+      padding: 0vh 5vw;
       font-style: italic;
       color: $bertaBlack;
       margin-bottom: 18px;
