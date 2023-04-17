@@ -9,6 +9,7 @@ import { getAllBlogs, getFrontpage, getForms, getFile, getAbout, getCards } from
 import Link from 'next/link';
 import Card from '../components/Cards';
 import About from 'components/About';
+import GPT from 'components/GPT'
 
 export default function Home({blogs, frontpage, surveys, files, about, cards }) {
   return (
@@ -30,11 +31,12 @@ export default function Home({blogs, frontpage, surveys, files, about, cards }) 
           {/*<div><Link href="/guide/guide">Le Guide</Link></div>*/}
         </div>
       </div>
+      <GPT />
       <AuthorIntro title={frontpage[0].title} ingress={frontpage[0].ingress}/>
       <Card cards={cards} />
       <Quote />
       <Hero content={frontpage} files={files} />
-      <FormsM surveys={surveys} />
+       {/*<FormsM surveys={surveys} />*/}
       <About content={about} />
       
       </PageLayout>

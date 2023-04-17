@@ -59,20 +59,20 @@ body, {
 .underline {
   height: 4px;
   width: 132px;
-  background-color: #4BE8B9;
+  background-color: $bertaGreen;
   display: block;
 }
 .underlineMedium {
   height: 4px;
   width: 250px;
-  background-color: #4BE8B9;
+  background-color: $bertaGreen;
   display: block;
 }
 
 .underlineBig {
   height: 4px;
   width: 600px;
-  background-color: #4BE8B9;
+  background-color: $bertaGreen;
   display: block;
 }
 
@@ -90,7 +90,7 @@ h1 {
     font-size: 55px;
   }
   @media only screen and (min-width: 800px) {
-    font-size: 66px;
+    font-size: 88px;
   }
   @media only screen and (min-width: 1000px) {
     font-size: 99px;
@@ -286,7 +286,7 @@ margin-top: 50px;
 .hero {
   @media only screen and (max-width: 600px) {
     margin: 10px 0px 50px;
-    border-left: solid 3px #4BE8B9;
+    border-left: solid 3px $bertaGreen;
   }
   .img {
     height: auto;
@@ -302,7 +302,7 @@ margin-top: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-left: solid 5px #4BE8B9;
+    border-left: solid 5px $bertaGreen;
     padding: 25px 15px;
   h3 {
     @media only screen and (max-width: 600px) {
@@ -421,8 +421,6 @@ margin-top: 50px;
       }
     }
     border-radius: 15px;
-   // display: inline-grid;
-   // grid-template-rows: auto;
     background-color: white;
   }
   ol {
@@ -600,7 +598,7 @@ margin-top: 50px;
         padding-left: 5px;
         font-size: 20px;
         align-self: center;
-        color: #4BE8B9;
+        color: $bertaGreen;
       }
       .ikkeEnig {
         @media only screen and (max-width: 600px) {
@@ -642,7 +640,7 @@ margin-top: 50px;
     transition: border 0.4s linear;
     transition: background-color 0.6s linear;
     &:hover {
-      background-color: #4BE8B9;
+      background-color: $bertaGreen;
       border: 0.20em solid #B5F5E2;
     }
     &:focus {
@@ -693,7 +691,7 @@ button {
   cursor: pointer;
   justify-content: center;
   display: flex;
-  background-color: #4BE8B9;
+  background-color: $bertaGreen;
   &:hover {
     background-color: #15A77B;
   }
@@ -725,19 +723,19 @@ button {
     line-height: normal;
   }
   a:hover{
-    color: #4BE8B9;
+    color: $bertaGreen;
   }
   h1 {
     font-family: 'gilroySemiBold';
     margin-bottom: 40px;
-    border-left: 5px solid #4BE8B9;
+    border-left: 5px solid $bertaGreen;
     padding-left: 20px;
     margin: 50px 0 50px 0;
   }
   h2 {
     font-family: gilroy;
     font-size: 39px;
-    border-left: 5px solid #4BE8B9;
+    border-left: 5px solid $bertaGreen;
     padding-left: 20px;
     margin: 50px 0 50px 0;
   }
@@ -767,7 +765,7 @@ button {
  ::marker {
   font-family: gilroy;
   font-size: 40px;
-  color: #15A77B;
+  color: $bertaGreen;
  }
 .br {
   padding: 20px;
