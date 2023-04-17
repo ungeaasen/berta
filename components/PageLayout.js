@@ -3,12 +3,10 @@ import Footer from 'components/Footer';
 export default function PageLayout({children}) {
   return (
     <>
-    <div className="container">
-      <div className="wrapper">
+      <div className="container">
         {children}
       </div>
-    </div>
-    <Footer />
+      <Footer />
     </>
   )
 }

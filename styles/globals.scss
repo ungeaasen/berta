@@ -10,7 +10,7 @@
 @font-face {
   font-family: "gilroyLight";
   src: url("../public/gilroyLight.woff") format('woff');
-  font-weight: lighter;
+  font-weight: normal;
 }
 
 @font-face {
@@ -25,16 +25,21 @@
 }
 
 $bertaBlack: #2C2C2C;
-$bertaWhite: #F0ECE6;
+$bertaWhite: #ffffffc6;
 $bertaGreen: #4BE8B9;
 $bertaGray: #F5F5F5;
+
+$bertaGutterLarge: 27vw;
+$bertaGutter: 40px;
+$bertaGutterMobile: 10px;
+
+$bottomMargin: 10px;
  
 strong {
   font-weight: bold;
 }
 
-html,
-  
+html, 
 body, {
     width: 100%;
     max-width: 2100px;
@@ -43,11 +48,14 @@ body, {
     padding: 0px;
     overflow-x: hidden;
     word-break: normal;
-    font-family: 'gilroy', 'Arial', sans-serif !important;
+    font-family: 'gilroyLight', 'Arial', sans-serif !important;
     line-height: normal;
     color: $bertaBlack;
     background-color: $bertaWhite;
     scroll-behavior: smooth;
+    font-smooth: always;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 #__next {
@@ -56,765 +64,58 @@ body, {
   min-height: 100vh;
 }
 
-.underline {
-  height: 4px;
-  width: 132px;
-  background-color: $bertaGreen;
-  display: block;
-}
-.underlineMedium {
-  height: 4px;
-  width: 250px;
-  background-color: $bertaGreen;
-  display: block;
+h1 {
+  @media screen and (min-width: 480px) {
+    font-size: 70px;
+  }
+  font-size: 40px;
 }
 
-.underlineBig {
-  height: 4px;
-  width: 600px;
-  background-color: $bertaGreen;
-  display: block;
+p {
+  @media screen and (min-width: 480px) {
+    font-size: 22px;
+  }
+  font-size: 19px;
+  line-break: strict;
 }
 
 a {
-  color: inherit;
   text-decoration: none;
-}
-
-h1 {
-  font-size: 25px;
-  @media only screen and (min-width: 360px) {
-    font-size: 37px;
-  }
-  @media only screen and (min-width: 600px) {
-    font-size: 55px;
-  }
-  @media only screen and (min-width: 800px) {
-    font-size: 88px;
-  }
-  @media only screen and (min-width: 1000px) {
-    font-size: 99px;
-  }
-
-  @media only screen and (min-width: 1400px) {
-    font-size: 120px;
-  }
-
-  @media only screen and (min-width: 1600px) {
-    font-size: 135px;
-  }
-
-  @media only screen and (min-width: 2000px) {
-    font-size: 166px;
-  }
-  
-  font-family: gilroySemiBold;
-}
-
-.CookieConsent {
-  @media only screen and (max-width: 600px) {
-    font-size: 18px;
-  }
-  font-family: gilroyLight;
-  background-color: #fefefe;
-  display: inline-block;
-  justify-content: center;
-  font-size: 24px;
-  text-align: center;
-  padding: 25px;
-  .declineButton {
-    background-color: red;
-  }
-  button {
-    @media only screen and (max-width: 600px) {
-      font-size: 16px;
-      width: 150px;
-    }
-    justify-content: center;
-    width: 250px;
-    margin-bottom: 25px;
-    margin-top: 25px;
-  }
-}
-
-body::-webkit-scrollbar {
-  display: none;
+  color: $bertaBlack;
 }
 
 .container {
-  margin: 0px 5px;
-  @media only screen and (min-width: 600px) {
-    margin: 0px 10px;
+  @media screen and (min-width: 480px) {
+    margin: 20px $bertaGutter;
   }
-  @media only screen and (min-width: 1200px) {
-    margin: 0px 45px;
+  @media screen and (min-width: 1024px) {
+    margin: 20px $bertaGutterLarge;
   }
-  .wrapper {
-      @media only screen and (max-width: 600px) {
-    //margin: 0px 15px;
+  margin: 10px $bertaGutterMobile;
+  .menu {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-bottom: $bottomMargin;
+    display: none;
   }
-    width: 100%;
-    height: 100%;
-    padding: 0px;
-    overflow-x: hidden;
-    word-break: normal;
+  .heading {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-bottom: $bottomMargin;
   }
-}
-
-.tittel {
-  @media only screen and (max-width: 600px) {
-    font-size: 12px;
-    margin: 10px 5px 50px 10px;
-    .underline {
-      width: 39px;
-      height: 2px;
-     }
-  }
-  @media only screen and (max-width: 820px) {
-    font-size: 12px;
-    margin-bottom: 25px;
-    margin: 10px 5px 50px 10px;
-    .underline {
-      width: 49px;
-      height: 2px;
-     }
-  }
-font-family: gilroy;
-font-size: 33px;
-margin-bottom: 250px;
-margin-top: 50px;
-}
-
-.ingress {
-  @media only screen and (max-width: 600px) {
-      margin: 0px 10px 50px 10px;
-  }
-  @media only screen and (max-width: 1024px) {
-    margin: 0px 10px 100px 10px;
-}
-  margin-bottom: 250px;
-
-  .intro {
-    @media screen and (max-width: 600px) {
-      margin-bottom: 0px;
-      .underlineBig {
-        width: 150px;
-        height: 3px;
-      }
-    }
-    @media screen and (max-width: 820px) {
-      margin-bottom: 0px;
-      .underlineBig {
-        width: 190px;
-        height: 3px;
-      }
-    }
-  padding-right: 25vw;
-  margin-bottom: 15px;
-
-  }
-  .introTekst {
-    font-size: 18px;
-    @media screen and (min-width: 600px) {
-      font-size: 33px;
-    }
-    @media screen and (min-width: 800px) {
-      font-size: 44px;
-    }
-    @media screen and (min-width: 1200px) {
-      font-size: 55px;
-    }
-  font-family: gilroyLight;
-  line-height: normal;
-  padding-right: 20vw;
-  max-width: 1600px;
-  }
-}
-
-.quote {
-  @media only screen and (max-width: 600px) {
-    margin-bottom: 50px;
-    padding: 0px 30px;
-  }
-  @media only screen and (max-width: 1024px) {
-    margin-bottom: 100px;
-  }
-  font-family: gilroyItalic;
-  margin-bottom: 250px;
- 
-  .quoteContainer {
-    font-size: 28px;
-    @media only screen and (min-width: 600px) {
-      p {
-          font-size: 44px;
-        }
-    }
-      @media only screen and (min-width: 1200px) {
-        p {
-            font-size: 66px;
-        }
-    }
-    @media only screen and (max-width: 600px) {
-      padding: 0px 20px;
-    }
-    @media only screen and (max-width: 1024px) {
-      padding: 0px 10px;
-    }
-      
-      padding: 0vh 5vw;
-      font-style: italic;
-      color: $bertaBlack;
-      margin-bottom: 18px;
-      max-width: 1200px;
-    .quoteSign {
-        //font-size: 90px;
-    }
-  }
-  .quoter {
-    @media only screen and (max-width: 600px) {
-      font-size: 14px;
-      padding: 0vh 5vw;
-    }
-      text-align: center;
-      font-family: gilroyLight;
-      padding: 0vh 10vw;
-      font-size: 18px;
-      max-width: 1200px;
-  }
-}
-
-.hero {
-  @media only screen and (max-width: 600px) {
-    margin: 10px 0px 50px;
-    border-left: solid 3px $bertaGreen;
-  }
-  .img {
-    height: auto;
-    margin: 20px;
-    color: orange;
-    img {
-      color: orange;
-    }
-  } 
-    overflow: hidden;
-    background-color: #fefefe;
-    margin: 250px 0px 250px 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-left: solid 5px $bertaGreen;
-    padding: 25px 15px;
-  h3 {
-    @media only screen and (max-width: 600px) {
-      font-size: 26px;
-      margin-bottom: 10px;
-    }
-    font-size: 46px;
-    margin-bottom: 25px;
-  }
-  a {
-    display: flex;
-    justify-content: center;
-  }
-  .heroLink {
-    @media only screen and (max-width: 600px) {
-      font-size: 16px;
-    }
-    font-family: gilroyLight;
-    font-size: 25px;
-    padding: 25px;
-  }
-  :hover {
-    color: #4BE8B9;
-    background-color: #fefefe;
+  .headingIntro {
+    margin-bottom: $bottomMargin;
   }
 }
 
 .pageFooter {
-  @media only screen and (max-width: 600px) {
-    font-size: 16px;
+  @media screen and (min-width: 480px) {
+    margin: 20px $bertaGutter;
   }
-  background-color: #fefefe92;
-  font-size: 30px;
-  overflow: hidden;
-  width: 100%;
-  a:hover {
-    opacity: 0.5;
-  }
-  .pageFooterContainer {
-    @media only screen and (max-width: 600px) {
-      height: 50px;
-    }
-      height: 100px;
-      display: flex;
-      justify-content: center;
-      align-items: flex-end;
-      padding-bottom: 20px;
-    .logo {
-      display: flex;
-      justify-content: flex-end;
-    }
-  }
-}
-/*------------------------------------------CARD------------------------------------------*/
-.cards {
-  @media only screen and (max-width: 600px) {
-    display: grid;
-    grid-template-columns: auto !important;
-  }
-  @media only screen and (max-width: 1024px) {
-    grid-template-columns: 1fr 1fr;
-    gap: 3%;
-  }
-  font-family: gilroyLight;
-  line-height: normal;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto;
-  gap: 5%;
-  margin-bottom: 250px;
-  width: 100%;
-  height: auto;
-  .cardItem {
-    @media only screen and (max-width: 600px) {
-      //margin-bottom: 25px;
-      margin: 0px 15px 0px 15px;
-     p {
-      font-size: 16px;
-     }
-     ol {
-      font-size: 16px;
-     }
-    }
-    .top {
-      border-radius: 15px;
-      width: 100%;
-      height: 75px;
-      background-color: $bertaGreen;
-      margin-bottom: 15px;
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      .icon {
-        padding-left: 10px;
-      }
-      .title {
-        font-family: gilroySemiBold;
-        padding-left: 10px;
-      }
-    }
-    .cardContent {
-      font-size: 20px;
-      display: grid;
-      grid-template-columns: 1fr;
-      padding: 20px;
-      .cardName {
-        @media only screen and (max-width: 600px) {
-          font-size: 17px;
-        }
-        font-family: gilroySemiBold;
-        font-size: 21px;
-        padding-bottom: 12px;
-        .cardTitle {
-          padding-right: 10px;
-        }
-      }
-    }
-    border-radius: 15px;
-    background-color: white;
-  }
-  ol {
-    line-height: normal;
-  }
-}
-/*------------------------------------------CARD END------------------------------------------*/
-
-
-/*------------------------------------------MODAL------------------------------------------*/
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color:#2C2C2C; /* Black w/ opacity */
-}
-
-.modal-content {
-  background-color: #fefefe;
-  margin: auto;
-  padding: 50px;
-  border: 1px solid #888;
-  width: 50vw;
-}
-  .text {
-    display: flex;
-    justify-content: center;
-    h2 {
-      @media screen and (max-width: 600px) {
-        font-size: 18px;
-      }
-      font-size: 30px;
-    }
-  }
-
-.close {
-  width: 100%;
-  color: #aaaaaa;
+  margin: 10px $bertaGutterMobile;
   display: flex;
-  justify-content: flex-end;
-  font-size: 28px;
-  font-weight: bold;
-  button {
-    margin: 0;
-    width: 50px;
-  }
-}
-
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
-/*------------------------------------------MODAL END------------------------------------------*/
-
-/*------------------------------------------FORM START------------------------------------------*/
-.form {
-  @media only screen and (max-width: 600px) {
-    margin: 0px 0px 25px 0px !important;
-    padding: 10px !important;
-    border-radius: 0%;
-  }
-  @media only screen and (max-width: 1024px) {
-    margin: 0px 0px 100px 0px !important;
-    padding: 20px !important;
-    border-radius: 25px;
-  }
-  @media only screen and (max-width: 1665px) {
-    margin: 0px 50px 250px 0px;
-    padding: 50px;
-    border-radius: 25px;
-  }
-    max-width: 1000px;
-    padding: 75px;
-    border-radius: 25px;
-    background-color:#fefefe;
-    font-family: gilroyLight;
-    margin: 0px 500px 250px 0px;
-  .surveyAward {
-    @media only screen and (max-width: 600px) {
-      font-size: 12px;
-      margin: 0px;
-      padding: 0px 20px;
-    }
-    @media only screen and (max-width: 1024px) {
-      font-size: 21px;
-      margin: 0px;
-      padding: 10px 20px;
-    }
-    padding: 10px 20px;
-    font-size: 25px;
-  }
-
-  .formWrapper {
-    h2 {
-      @media only screen and (max-width: 600px) {
-        font-size: 19px;
-        margin-bottom: 15px;
-      }
-      font-family: gilroy;
-      text-align: center ;
-      font-size: 26px;
-      margin-bottom: 36px;
-    }
-    .formTitle {
-      @media only screen and (max-width: 600px) {
-        font-size: 16px;
-        margin: 0px 15px;
-      }
-      color: rgb(44,44,44,0.6);
-      font-family: gilroySemiBold;
-      font-size: 22px;
-      margin-bottom: 8px;
-    }
-    .formText {
-      @media only screen and (max-width: 600px) {
-        font-size: 19px;
-        margin: 0px 0px;
-      }
-      font-size: 24px;
-      margin-bottom: 90px;
-      line-height: normal;
-      .boldText {
-        @media only screen and (max-width: 600px) {
-          font-size: 24px;
-            .underlineMedium {
-              width: 80px;
-            }
-        }
-        font-family: gilroy;
-        font-size: 48px;
-        margin-bottom: 20px;
-      }
-    }
-    .texts {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-    .questionText {
-      @media only screen and (max-width: 600px) {
-        margin-bottom: 8px;
-      }
-      @media only screen and (max-width: 1024px) {
-        font-size: 19px;
-        margin-bottom: 8px;
-      }
-      font-size: 21px;
-      margin-bottom: 15px;
-    }
-    .buttons {
-      @media only screen and (max-width: 600px) {
-        margin-bottom: 40px;
-      }
-      display: flex;
-      flex-grow: 1;
-      justify-content: space-around;
-      border: 0;
-      margin-bottom: 80px;
-      .enig {
-        @media only screen and (max-width: 600px) {
-          font-size: 14px;
-          margin: 3px;
-        }
-        margin: 15px;
-        font-family: gilroy;
-        padding-left: 5px;
-        font-size: 20px;
-        align-self: center;
-        color: $bertaGreen;
-      }
-      .ikkeEnig {
-        @media only screen and (max-width: 600px) {
-          font-size: 14px;
-          margin: 3px;
-        }
-        font-family: gilroy;
-        padding-right: 5px;
-        font-size: 20px;
-        align-self: center;
-        color: #E36AE6
-      }
-    }
-  }
-  .g-recaptcha {
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-  }
-}
-.textArea {
-  //width: 100%;
-}
-
-  input[type="radio"] {
-    appearance: none;
-    @media screen and (max-width: 740px) {
-      width: 1.15em;
-      height: 1.15em;
-      margin: 4px;
-    }
-    margin: 15px;
-    width: 2.15em;
-    height: 2.15em;
-    border: 0.10em solid gray;
-    
-    border-radius: 50%;
-    transform: translateY(-0.075em);
-    transition: border 0.4s linear;
-    transition: background-color 0.6s linear;
-    &:hover {
-      background-color: $bertaGreen;
-      border: 0.20em solid #B5F5E2;
-    }
-    &:focus {
-      background-color: #15A77B;
-    }
-    &:checked {
-      background-color:  #15A77B;
-    }
-  }
-
-input,
-textarea {
-  @media only screen and (max-width: 600px) {
-    font-size: 15px;
-    margin-bottom: 15px;
-  }
-  border-radius: 25px;
-  width: 100%;
-  margin-bottom: 35px;
-  border: none;
-  outline: 0;
-  letter-spacing: 0.2rem;
-  font-size: 1.6rem;
-  color: rgb(44,44,44,0.6);
-  padding: 10px;
-  background-color: $bertaGray;
-  &:focus{
-    background-color: #e2e3e3b8
-  }
-  &:active{
-    background-color: #9d9d9d;
-  }
-}
-
-button {
-  @media screen and (max-width: 600px) {
-    font-size: 18px;
-  }
-  border: none;
-  font-size: 23px;
-  text-transform: uppercase;
-  letter-spacing: 1.8px;
-  width: 80%;
-  border-radius: 12px;
-  margin: auto;
-  padding: 0.6rem;
-  border: 2px solid transparent;
-  cursor: pointer;
   justify-content: center;
-  display: flex;
-  background-color: $bertaGreen;
-  &:hover {
-    background-color: #15A77B;
-  }
+  text-align: center;
 }
-
-.sendText {
-  @media only screen and (max-width: 600px) {
-    font-size: 19px;
-  }
-  font-family: gilroySemiBold;
-  font-size: 23px;
-  padding: 45px;
-}
-
-.afterForm {
-  font-size: 28px;
-  h3 {
-    font-size: 45px;
-  }
-}
-
-/*------------------------------------------FORM END------------------------------------------*/
-/*------------------------------------------GUIDE START------------------------------------------*/
-
-.guide  {
-  padding-right: 25vw;
-  font-family: 'gilroyLight';
-  p {
-    line-height: normal;
-  }
-  a:hover{
-    color: $bertaGreen;
-  }
-  h1 {
-    font-family: 'gilroySemiBold';
-    margin-bottom: 40px;
-    border-left: 5px solid $bertaGreen;
-    padding-left: 20px;
-    margin: 50px 0 50px 0;
-  }
-  h2 {
-    font-family: gilroy;
-    font-size: 39px;
-    border-left: 5px solid $bertaGreen;
-    padding-left: 20px;
-    margin: 50px 0 50px 0;
-  }
-  h3 {
-    font-family: gilroy;
-    font-size: 29px;
-  }
-  h4 {
-    font-family: gilroy;
-    font-size: 30px;
-    margin-bottom: 20px;
-  }
- h5 {
-  font-family: gilroySemiBold;
-  font-size: 25px;
-  margin-bottom: 40px;
- }
- ol {
-  margin-left: 28px;
- }
-
- li {
-  font-size: 23px;
-  line-height: 1.5;
-  margin-bottom: 20px;
- }
- ::marker {
-  font-family: gilroy;
-  font-size: 40px;
-  color: $bertaGreen;
- }
-.br {
-  padding: 20px;
-}
- strong {
-  font-size: 26px;
-  margin-bottom: 10px;
- }
- p {
-      font-size: 23px;
-  }
-}
-/*------------------------------------------GUIDE END------------------------------------------*/
-/*------------------------------------------ABOUT START------------------------------------------*/
-.about {    
-    @media only screen and (max-width: 600px) {
-      padding: 5px;
-      border-left: solid 5px $bertaGreen;
-      margin-bottom: 50px;
-    }
-
-  border-left: solid 21px $bertaGreen;
-  line-height: normal;
-  padding: 20px;
-  margin-bottom: 250px;
-  font-family: gilroyLight;
-  background-color: #F5F5F5;
-  h2 {
-    @media only screen and (max-width: 600px) {
-      font-size: 33px;
-    }
-    font-family: gilroy;
-    font-size: 36px;
-  }
-  h4 {
-    @media only screen and (max-width: 600px) {
-      font-size: 21px;
-    }
-    font-size: 32px;
-  }
-  p {
-    @media only screen and (max-width: 600px) {
-      font-size: 19px;
-    }
-    font-size: 28px;
-  }
-}
-/*------------------------------------------ABOUT END------------------------------------------*/
-
-
 
 
