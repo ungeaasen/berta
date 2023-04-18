@@ -19,7 +19,7 @@ export default function Home({ frontpage }) {
             berta.no
           </div>
         </div>
-      <AuthorIntro title={frontpage[0].title} ingress={frontpage[0].ingress}/>
+      <AuthorIntro title={frontpage[0].title} ingress={frontpage[0].ingress} image={frontpage[0].image}/>
     </PageLayout>
   )
 }

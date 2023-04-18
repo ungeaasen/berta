@@ -66,9 +66,10 @@ body, {
 
 h1 {
   @media screen and (min-width: 480px) {
-    font-size: 70px;
+    font-size: 90px;
   }
-  font-size: 40px;
+  font-family: gilroySemiBold;
+  font-size: 55px;
 }
 
 p {
@@ -85,13 +86,14 @@ a {
 }
 
 .container {
+  margin: 140px $bertaGutterMobile;
   @media screen and (min-width: 480px) {
-    margin: 20px $bertaGutter;
+    margin: 160px $bertaGutter;
   }
   @media screen and (min-width: 1024px) {
-    margin: 20px $bertaGutterLarge;
+    margin: 180px $bertaGutterLarge;
   }
-  margin: 10px $bertaGutterMobile;
+  
   .menu {
     display: grid;
     grid-template-columns: 1fr;
@@ -102,20 +104,47 @@ a {
     display: grid;
     grid-template-columns: 1fr;
     margin-bottom: $bottomMargin;
+    text-align: center;
   }
   .headingIntro {
     margin-bottom: $bottomMargin;
+  }
+
+  .image {
+    position: relative;
+    width: 100%;
+    //min-height: 100%;
+    overflow: "hidden";
+    display: grid;
+    grid-template-columns: 1fr;
+    img {
+      min-height: 100%;
+      min-width: 100%;
+      max-width: 100%;
+      object-fit: contain;
+      display: block;
+    }
   }
 }
 
 .pageFooter {
   @media screen and (min-width: 480px) {
-    margin: 20px $bertaGutter;
+    height: 100px;
+    font-size: 25px;
   }
+  font-family: gilroySemiBold;
+  font-size: 20px;
   margin: 10px $bertaGutterMobile;
   display: flex;
   justify-content: center;
+  align-items: flex-end;
+  padding: 20px;
   text-align: center;
+  background-color: lightblue;
+  height: 50px;
+  a:hover {
+    color:grey
+  }
 }
 
 

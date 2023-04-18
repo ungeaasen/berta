@@ -1,15 +1,28 @@
 
+import Image from 'next/image';
+import sanityCLient from 'lib/sanity'
+import imageUrlBuilder from '@sanity/image-url';
 
-function AuthorIntro ({ title, ingress }) {
+
+function AuthorIntro ({ title, ingress, image }) {
+  const builder = imageUrlBuilder(sanityCLient);
+    
+  function urlFor(source) {
+    return builder.image(source)
+  }
   return (
     <>
       <div className="heading">
         <h1>Hei!</h1>
       </div>
+      <div className='image'>
+        <Image src={urlFor(image).url()} alt="" height={1024} width={1400} />
+      </div>
+      
       <div className='headingIntro'>
-        <p> <br></br><br></br>
-
+        <p>
           Berta er i full sving med å bygge en rå nettside. Men før den er klar, vil vi gi deg et kjapt innblikk i hva vi kan tilby deg og din virksomhet.
+          <br></br>
           <br></br>
           La oss sette til side dyre byråer og lange beslutningsprosesser. Med Berta ved deres side kan dere spare tid og penger ved å ta kreative prosjekter i egne hender. 
           <br></br>
@@ -28,8 +41,12 @@ function AuthorIntro ({ title, ingress }) {
           <br></br>
           <br></br>
           Hver gang dere samarbeider med Berta, blir dere mer erfarne og dyktige i å løse praktiske problemer og se muligheter i kreative prosesser. Vi hjelper dere med å bygge selvtillit og mestre nye ferdigheter, slik at dere kan ta fatt på fremtidige prosjekter med kompetanse, kreativitet og handlekraft.
-
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
           Hilsen Bjørn 
+          <br></br>
           kreativ rådgiver i Berta
         </p>
           
