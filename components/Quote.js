@@ -10,7 +10,7 @@ const Quote = () => {
            
             </div>
             <div className="quoter">
-                <p>– Line Kristine Moen Larsen, Leveranseleder kultur og struktur NAF</p>
+                <p>– Line Kristine Larsen, Leveranseleder kultur og struktur NAF</p>
             </div>
         </div>
     )
