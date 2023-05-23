@@ -114,7 +114,8 @@ function FormsM({ surveys }) {
                       <SanityBlockContent blocks={srv.questionText} serializers={serializers} />
                         {srv.questionText.map(txt => {txt})}
                         </div>
-                      <TextField entry={srv.entry} formData={formData} setFormData={setFormData}/>
+                      {/*<TextField entry={srv.entry} formData={formData} setFormData={setFormData}/>*/}
+                      <Buttons entry={srv.entry} formData={formData} setFormData={setFormData}/>
                     </div>
                   )
                 }
