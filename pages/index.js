@@ -24,7 +24,7 @@ export default function Home({blogs, frontpage, surveys, files, about, cards }) 
       <div>
         <div className="tittel">
           <div href="#home">
-            berta.no
+            berta.no.
             <span className='underline'></span>
           </div>
           {/*<div><Link href="/guide/guide">Le Guide</Link></div>*/}
